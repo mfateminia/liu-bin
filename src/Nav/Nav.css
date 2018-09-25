@@ -1,0 +1,28 @@
+.nav-container{
+    position: relative;
+    min-height: 50px;
+    background-color: paleturquoise;
+}
+
+ul.nav-items {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li.nav-item{
+    display: inline;
+}
+
+li:after{
+    content: '|';
+    padding: 12px;
+}
+
+li:last-child:after{
+    content: '';
+}
