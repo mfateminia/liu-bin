@@ -1,9 +1,18 @@
-img{
-    float: left;
+p{
+    padding: 0;
+    margin: 0;
+}
+  
+.-subtitle{
+margin-top: 8px;
+font-size: 14px;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+.-card-text{
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+.-button{
+    margin-top: 12px;
 }

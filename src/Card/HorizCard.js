@@ -4,24 +4,29 @@ import './HorizCard.css';
 //props has imgUrl, title, subtitle, text, btnLabel
 const HorizCard = (props) => {
     return (
-        <div className = 'card-wrapper clearfix p-4 bg-secondary'>
-            <img className = 'img-fluid' width = '300' src = {props.imgUrl} alt = 'Image not found!'/>
-            <div className = 'card-body'>
-                <div className = 'card-title'>
-                    <h3 className = 'title'>
-                        {props.title}
-                    </h3>
-                    <h4 className = 'subtitle'>
-                        {props.subtitle}
-                    </h4>
+        <div className = '-card-wrapper container clearfix p-4 bg-secondary'>
+            <div className = 'row'>
+                <div className = 'col-md-4'>
+                    <img className = 'img-fluid' src = {props.imgUrl} alt = 'Image not found!'/>
                 </div>
+                
+                <div className = '-card-body col-md-8'>
+                    <div className = '-card-title'>
+                        <p className = '-title font-weight-bold'>
+                            {props.title}
+                        </p>
+                        <p className = '-subtitle font-italic'>
+                            {props.subtitle}
+                        </p>
+                    </div>
 
-                <p className = 'card-text'>
-                    {props.text}
-                </p>
+                    <p className = '-card-text'>
+                        {props.text}
+                    </p>
 
-                <div className = 'card-button'>
-                    {props.btnLabel}
+                    <div className = '-button btn btn-primary'>
+                        {props.btnLabel}
+                    </div>
                 </div>
             </div>
         </div>
