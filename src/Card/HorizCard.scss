@@ -1,9 +1,9 @@
-@import '../sass/variables';
+img{
+    float: left;
+}
 
-.card-wrapper{
-    width: 100%;
-    height: 200px;
-    padding: 12px;
-    background-color: color(shade);
-
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }

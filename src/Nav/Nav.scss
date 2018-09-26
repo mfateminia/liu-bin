@@ -2,8 +2,9 @@
  
 .nav-container{
     position: relative;
-    min-height: 50px;
+    min-height: 4*$spacer;
     background-color: $primary;
+
 
     ul.nav-items {
         position: absolute;
@@ -24,10 +25,11 @@
             padding-bottom: 3px;
         }
 
+
         li.nav-item:not(:first-child){
             border-left: 1px solid $white;
         }
-        
+      
         li.nav-item:hover{
             transition: 0.28s;
             color: $secondary;

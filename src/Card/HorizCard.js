@@ -4,8 +4,8 @@ import './HorizCard.css';
 //props has imgUrl, title, subtitle, text, btnLabel
 const HorizCard = (props) => {
     return (
-        <div className = 'card-wrapper'>
-            <img src = {props.imgUrl} alt = 'Image not found!'/>
+        <div className = 'card-wrapper clearfix p-4 bg-secondary'>
+            <img className = 'img-fluid' width = '300' src = {props.imgUrl} alt = 'Image not found!'/>
             <div className = 'card-body'>
                 <div className = 'card-title'>
                     <h3 className = 'title'>
