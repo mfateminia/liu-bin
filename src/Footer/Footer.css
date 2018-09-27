@@ -1,0 +1,24 @@
+.-outer-wrapper {
+  font-size: 14px;
+  min-height: 200px;
+  padding-top: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
+.-address {
+  padding-right: 50px; }
+
+.-contact div {
+  padding-left: 10px;
+  padding-bottom: 10px; }
+
+.-footer-nav {
+  border-left: 1px solid #ffc000;
+  color: #ffc000; }
+  .-footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .-footer-nav li {
+    padding-bottom: 10px; }
