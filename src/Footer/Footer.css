@@ -8,10 +8,16 @@
 
 .-address {
   padding-right: 50px; }
+  .-address .view-on-map {
+    margin-top: 10px; }
 
 .-contact div {
   padding-left: 10px;
-  padding-bottom: 10px; }
+  padding-bottom: 22px; }
+
+.-icon {
+  font-size: 18px;
+  margin-right: 10px; }
 
 .-footer-nav {
   border-left: 1px solid #ffc000;

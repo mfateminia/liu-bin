@@ -13,13 +13,22 @@
 
 .-address{
     padding-right: 50px;
+
+    .view-on-map{
+        margin-top: 10px;
+    }
 }
 
 .-contact{
     div{
         padding-left: 10px;
-        padding-bottom: 10px;
+        padding-bottom: 22px;
     }
+}
+
+.-icon{
+    font-size: 18px;
+    margin-right: 10px;
 }
 
 .-footer-nav{

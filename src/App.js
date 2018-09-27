@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import Nav from './Nav/Nav';
 import HorizCard from './Card/HorizCard';
-import Footer from './Footer/Footer'
+import Footer from './Footer/Footer';
+// import { library } from '@fortawesome/fontawesome-svg-core'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
 import './App.css';
+
+// library.add(faStroopwafel);
 
 class App extends Component {
   render() {

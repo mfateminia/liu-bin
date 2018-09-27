@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 
+
 const Footer = () => {
 	return (
 		<div className = '-outer-wrapper container-fluid bg-primary text-light'>
@@ -9,20 +10,25 @@ const Footer = () => {
                 
                 <div className = 'row'>
                     <div className = 'col-11 row'>
-                        <div className = '-address col-md-7'>
-                            National University of Singapore
+                        <div className = '-address col-md-7'>                        
+                            Address: National University of Singapore
                             Department of Chemical and Biomolecular Engineering, 
                             4 Engineering Drive 4, Blk E5 #02-17,
-                            Singapore 117585 (<a>view on map</a>)						
+                            Singapore 117585 
+                            <p className = 'view-on-map'> <i className="fas fa-map-marker-alt -icon"></i>view on map</p>						
                         </div>	
                         <div className = '-contact col-md-5'>
+
                             <div className = '-email'>
+                            <i className="fas fa-envelope -icon"></i>
                                 cheliub@nus.edu.sg
                             </div>
                             <div className = '-telephone'>
+                            <i className="fas fa-phone -icon"></i>
                                 +65 6516 8049
                             </div>	
                             <div className = '-fax'>
+                            <i className="fas fa-fax -icon"></i>
                                 +65 6779 1936
                             </div>						
                         </div>						
