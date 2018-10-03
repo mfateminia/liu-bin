@@ -1,0 +1,15 @@
+@import './styles/variables.scss';
+
+body, html{
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.-app-wrapper{
+    position:relative;
+
+    .-app-titles{
+        color: $success-color;
+        margin-top: 40px;
+    }
+}
