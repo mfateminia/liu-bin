@@ -1,6 +1,6 @@
-@import '../bootstrap/variables.scss';
+@import '../styles/variables.scss';
 
-.-outer-wrapper{
+.-footer-outer-wrapper{
     font-size: 14px;
     
     min-height: 200px;   
@@ -11,7 +11,7 @@
     left:0;
 }
 
-.-address{
+.-footer-address{
     padding-right: 50px;
     padding-bottom: 20px;
     .view-on-map{
@@ -19,14 +19,13 @@
     }
 }
 
-.-contact{
+.-footer-contact{
     div{
-        // padding-left: 10px;
         padding-bottom: 22px;
     }
 }
 
-.-icon{
+.-footer-icon{
     font-size: 18px;
     margin-right: 10px;
 }

@@ -1,4 +1,4 @@
-.-outer-wrapper {
+.-footer-outer-wrapper {
   font-size: 14px;
   min-height: 200px;
   padding-top: 30px;
@@ -6,16 +6,16 @@
   bottom: 0;
   left: 0; }
 
-.-address {
+.-footer-address {
   padding-right: 50px;
   padding-bottom: 20px; }
-  .-address .view-on-map {
+  .-footer-address .view-on-map {
     margin-top: 10px; }
 
-.-contact div {
+.-footer-contact div {
   padding-bottom: 22px; }
 
-.-icon {
+.-footer-icon {
   font-size: 18px;
   margin-right: 10px; }
 
