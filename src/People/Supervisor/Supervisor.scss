@@ -1,0 +1,39 @@
+@import '../../styles/variables.scss';
+
+.-supervisor-outer-wrapper{
+    background-color: $secondary-color;
+    padding: 20px;
+
+
+
+    .-supervisor-description{
+        
+    }
+
+
+
+    p{
+        padding: 0;
+        margin:0;
+    }
+}
+
+.-supervisor-image{
+    float: left;
+    width: 150px;
+    margin-right: 20px;
+}
+
+.-supervisor-contact{
+    border-left: 1px solid $success-color;
+
+    p{
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 786px){
+    .-supervisor-outer-wrapper .-supervisor-image{
+        display: none;
+    }
+}
