@@ -21,14 +21,14 @@ const Supervisor = () => {
         <div className = '-supervisor-outer-wrapper container clearfix'>
             <img className = '-supervisor-image' src = {liuBin}/>
             <div className = '-supervisor-text row'>
-                <div className = '-supervisor-description col-sm-8'>
+                <div className = '-supervisor-description col-sm-7'>
                     <p className = '-supervisor-name'>{supervisorDetails.fullName()}</p>
                     <p className = '-supervisor-rank'>{supervisorDetails.rank}</p>
                     <p className = '-supervisor-title'>{supervisorDetails.title}</p>
                     <button className = '-supervisor-button btn btn-primary'>Read more</button>
                 </div>
 
-                <div className = '-supervisor-contact col-sm-4'>
+                <div className = '-supervisor-contact col-sm-5'>
                     <p className = '-supervisor-email'>
                         <i className="-footer-icon fas fa-envelope"></i>
                         {supervisorDetails.email}
