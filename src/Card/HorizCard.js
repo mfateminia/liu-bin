@@ -11,11 +11,11 @@ const HorizCard = (props) => {
                 </div>
                 
                 <div className = '-card-body col-md-8'>
-                    <div className = '-card-title'>
-                        <p className = '-title font-weight-bold'>
+                    <div className = '-card-title-wrapper'>
+                        <p className = '-card-title font-weight-bold'>
                             {props.title}
                         </p>
-                        <p className = '-subtitle font-italic'>
+                        <p className = '-card-subtitle font-italic'>
                             {props.subtitle}
                         </p>
                     </div>
@@ -24,7 +24,7 @@ const HorizCard = (props) => {
                         {props.text}
                     </p>
 
-                    <div className = '-button btn btn-primary'>
+                    <div className = '-card-button btn btn-primary'>
                         {props.btnLabel}
                     </div>
                 </div>
