@@ -1,26 +1,61 @@
-.nav-container {
-  position: relative;
-  min-height: 4rem;
-  background-color: #004080; }
-  .nav-container ul.nav-items {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    color: #fff; }
-    .nav-container ul.nav-items li.nav-item {
-      transition: 0.5s;
-      display: inline;
-      padding-left: 12px;
-      padding-right: 12px;
-      padding-top: 3px;
-      padding-bottom: 3px; }
-    .nav-container ul.nav-items li.nav-item:not(:first-child) {
-      border-left: 1px solid #fff; }
-    .nav-container ul.nav-items li.nav-item:hover {
-      transition: 0.28s;
+.-nav-wrapper {
+  position: fixed;
+  top: 0;
+  right: 17px;
+  z-index: 1000;
+  width: 100%; }
+  .-nav-wrapper .-nav-brand {
+    float: left;
+    margin-left: 20px;
+    padding: 0; }
+    .-nav-wrapper .-nav-brand img {
+      box-sizing: content-box;
+      margin: 0;
+      width: 120px; }
+  .-nav-wrapper .-nav-inner-wrapper {
+    margin-top: 20px;
+    margin-right: 40px;
+    float: right;
+    color: #ffffff; }
+    .-nav-wrapper .-nav-inner-wrapper .-nav-link {
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      color: #ffffff; }
+    .-nav-wrapper .-nav-inner-wrapper .-nav-link:hover {
+      transition: 0.4s;
       color: #ffc000;
       cursor: pointer; }
+
+.-nav-icon {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  color: #ffffff; }
+
+@media screen and (max-width: 768px) {
+  .-nav-inner-wrapper {
+    display: none; }
+
+  .-nav-wrapper {
+    height: 60px;
+    background-color: #004080; }
+    .-nav-wrapper .-nav-icon {
+      display: block; } }
+.-nav-toggler {
+  display: block;
+  position: relative;
+  top: 40px;
+  left: 40px;
+  background-color: rgba(0, 64, 128, 0.8);
+  float: none;
+  text-align: left;
+  width: 200px; }
+  .-nav-toggler .-nav-link {
+    display: block;
+    text-align: left !important; }
+  .-nav-toggler .-nav-link:hover {
+    color: #004080 !important;
+    background-color: rgba(255, 192, 0, 0.8); }
