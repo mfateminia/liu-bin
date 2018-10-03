@@ -1,10 +1,14 @@
 import React from 'react';
 import './People.css';
 import Supervisor from './Supervisor/Supervisor';
+import Researchers from './Researchers/Researchers';
 
 const People = () => {
     return (
-        <Supervisor />
+        <div className = '-people-wrapper'>
+            <Supervisor />
+            <Researchers />
+        </div>
     );
 }
 
