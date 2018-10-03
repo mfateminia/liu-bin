@@ -1,0 +1,81 @@
+@import '../styles/variables.scss';
+
+.-hero-image-outer-wrapper{
+    position: relative;
+    overflow:visible;
+    
+    @media only screen and (max-width: 768px) {
+        position: static;
+        padding-top:60px;
+    }
+
+    .-hero-image-inner-wrapper{
+        position: relative;
+        overflow:visible;
+    }
+
+    .-hero-image-image-wrapper{
+        position: relative;
+        top: 0px;
+        left: -7%;
+        width: 115%;
+        z-index: 1;
+
+
+
+        .-hero-image-image{
+            width: 100%;
+            height:100%;
+        }
+
+        .-hero-image-overlay{
+            position: absolute;
+            top:0;
+            left:0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.7);
+        }
+    }
+
+    .-hero-image-text-wrapper{
+        z-index: 2;
+        position: absolute;
+        display: inline;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    
+        h1{
+            padding-bottom: 1.5%;
+        }
+    
+        p{
+            margin: 0 auto;
+
+            @media only screen and (min-width: 768px) {
+                max-width: 500px;
+            }
+        }
+
+        .-hero-image-button{
+            transition: 200ms;
+            margin: 0 auto;
+            margin-top: 20px;
+            padding: 12px;
+            background-color: $secondary-color;
+            color: $primary-color;
+            height: 48px;
+            width: 134px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .-hero-image-button:hover{
+            transition: 200ms;
+            background-color: $primary-color;
+            color: $secondary-color;
+        }
+    }
+}

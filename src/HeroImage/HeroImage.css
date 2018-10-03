@@ -1,0 +1,56 @@
+.-hero-image-outer-wrapper {
+  position: relative;
+  overflow: visible; }
+  @media only screen and (max-width: 768px) {
+    .-hero-image-outer-wrapper {
+      position: static;
+      padding-top: 60px; } }
+  .-hero-image-outer-wrapper .-hero-image-inner-wrapper {
+    position: relative;
+    overflow: visible; }
+  .-hero-image-outer-wrapper .-hero-image-image-wrapper {
+    position: relative;
+    top: 0px;
+    left: -7%;
+    width: 115%;
+    z-index: 1; }
+    .-hero-image-outer-wrapper .-hero-image-image-wrapper .-hero-image-image {
+      width: 100%;
+      height: 100%; }
+    .-hero-image-outer-wrapper .-hero-image-image-wrapper .-hero-image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7); }
+  .-hero-image-outer-wrapper .-hero-image-text-wrapper {
+    z-index: 2;
+    position: absolute;
+    display: inline;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+    .-hero-image-outer-wrapper .-hero-image-text-wrapper h1 {
+      padding-bottom: 1.5%; }
+    .-hero-image-outer-wrapper .-hero-image-text-wrapper p {
+      margin: 0 auto; }
+      @media only screen and (min-width: 768px) {
+        .-hero-image-outer-wrapper .-hero-image-text-wrapper p {
+          max-width: 500px; } }
+    .-hero-image-outer-wrapper .-hero-image-text-wrapper .-hero-image-button {
+      transition: 200ms;
+      margin: 0 auto;
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #deebf7;
+      color: #004080;
+      height: 48px;
+      width: 134px;
+      border-radius: 4px;
+      cursor: pointer; }
+    .-hero-image-outer-wrapper .-hero-image-text-wrapper .-hero-image-button:hover {
+      transition: 200ms;
+      background-color: #004080;
+      color: #deebf7; }
