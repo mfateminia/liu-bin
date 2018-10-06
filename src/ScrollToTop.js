@@ -11,7 +11,6 @@ class ScrollToTop extends Component {
     }
   
     render() {
-        console.log('passed');
       return this.props.children
     }
   }
