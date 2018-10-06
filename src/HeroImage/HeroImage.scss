@@ -1,13 +1,8 @@
 @import '../styles/variables.scss';
 
 .-hero-image-outer-wrapper{
-    position: relative;
     overflow:visible;
-    
-    @media only screen and (max-width: 768px) {
-        position: static;
-        padding-top:60px;
-    }
+    color: $white-color;
 
     .-hero-image-inner-wrapper{
         position: relative;
@@ -20,8 +15,6 @@
         left: -7%;
         width: 115%;
         z-index: 1;
-
-
 
         .-hero-image-image{
             width: 100%;
@@ -45,37 +38,77 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        text-align: center;
-    
-        h1{
-            padding-bottom: 1.5%;
-        }
-    
+        text-align: center;    
+        
         p{
             margin: 0 auto;
+        }
+    }
+}
 
-            @media only screen and (min-width: 768px) {
-                max-width: 500px;
-            }
-        }
+.-hero-image-button{
+    transition: 200ms;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: $secondary-color;
+    color: $primary-color;
+    height: 48px;
+    width: 200px;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
-        .-hero-image-button{
-            transition: 200ms;
-            margin: 0 auto;
-            margin-top: 20px;
-            padding: 12px;
-            background-color: $secondary-color;
-            color: $primary-color;
-            height: 48px;
-            width: 134px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        
-        .-hero-image-button:hover{
-            transition: 200ms;
-            background-color: $primary-color;
-            color: $secondary-color;
-        }
+.-hero-image-button:hover{
+    transition: 200ms;
+    background-color: $primary-color;
+    color: $secondary-color;
+}
+
+@media only screen and (max-width: 768px) {
+    .-hero-image-outer-wrapper{
+        position: static;
+        padding-top:60px;
+    }
+
+    h1{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    p{
+        font-size: 14px;
+    }
+
+    .-hero-image-button{
+        display: none;
+    }
+}
+@media only screen and (min-width: 425px) and (max-width:768px) {
+    h1{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    p{
+        font-size: 16px;
+        max-width: 500px;
+    }
+
+    .-hero-image-button{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .-hero-image-outer-wrapper{
+        position: relative;
+        }     
+    
+    h1{
+        font-size: 30px;
+        padding-bottom: 1.5%;
+    }
+    p{
+        font-size: 16px;
+        max-width: 500px;
     }
 }

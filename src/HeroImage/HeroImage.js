@@ -11,11 +11,11 @@ const HeroImage = () =>{
                         <div className = '-hero-image-overlay'></div>
                 </div>
 
-                <div className ="-hero-image-text-wrapper text-white text-center container-fluid">
-                    <h1>Liu's Research Group</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div className ="-hero-image-text-wrapper container-fluid">
+                    <h1 classsName = '-hero-image-heading'>Liu's Research Group</h1>
+                    <p>where Chemistry, Materials, and Biology meet to create unique nanoprobes for theranostic applications</p>
                     <div className = '-hero-image-button'>
-                        Read more
+                        Be a part of our network
                     </div>
                 </div>
             </div>

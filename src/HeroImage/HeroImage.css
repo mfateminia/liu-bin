@@ -1,10 +1,6 @@
 .-hero-image-outer-wrapper {
-  position: relative;
-  overflow: visible; }
-  @media only screen and (max-width: 768px) {
-    .-hero-image-outer-wrapper {
-      position: static;
-      padding-top: 60px; } }
+  overflow: visible;
+  color: #ffffff; }
   .-hero-image-outer-wrapper .-hero-image-inner-wrapper {
     position: relative;
     overflow: visible; }
@@ -32,25 +28,59 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
-    .-hero-image-outer-wrapper .-hero-image-text-wrapper h1 {
-      padding-bottom: 1.5%; }
     .-hero-image-outer-wrapper .-hero-image-text-wrapper p {
       margin: 0 auto; }
-      @media only screen and (min-width: 768px) {
-        .-hero-image-outer-wrapper .-hero-image-text-wrapper p {
-          max-width: 500px; } }
-    .-hero-image-outer-wrapper .-hero-image-text-wrapper .-hero-image-button {
-      transition: 200ms;
-      margin: 0 auto;
-      margin-top: 20px;
-      padding: 12px;
-      background-color: #deebf7;
-      color: #004080;
-      height: 48px;
-      width: 134px;
-      border-radius: 4px;
-      cursor: pointer; }
-    .-hero-image-outer-wrapper .-hero-image-text-wrapper .-hero-image-button:hover {
-      transition: 200ms;
-      background-color: #004080;
-      color: #deebf7; }
+
+.-hero-image-button {
+  transition: 200ms;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #deebf7;
+  color: #004080;
+  height: 48px;
+  width: 200px;
+  border-radius: 4px;
+  cursor: pointer; }
+
+.-hero-image-button:hover {
+  transition: 200ms;
+  background-color: #004080;
+  color: #deebf7; }
+
+@media only screen and (max-width: 768px) {
+  .-hero-image-outer-wrapper {
+    position: static;
+    padding-top: 60px; }
+
+  h1 {
+    font-size: 18px;
+    font-weight: bold; }
+
+  p {
+    font-size: 14px; }
+
+  .-hero-image-button {
+    display: none; } }
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+  h1 {
+    font-size: 25px;
+    font-weight: bold; }
+
+  p {
+    font-size: 16px;
+    max-width: 500px; }
+
+  .-hero-image-button {
+    display: none; } }
+@media only screen and (min-width: 768px) {
+  .-hero-image-outer-wrapper {
+    position: relative; }
+
+  h1 {
+    font-size: 30px;
+    padding-bottom: 1.5%; }
+
+  p {
+    font-size: 16px;
+    max-width: 500px; } }
