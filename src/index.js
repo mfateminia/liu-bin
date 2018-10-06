@@ -1,4 +1,5 @@
 import './styles/bootstrap.css';
+import { BrowserRouter } from 'react-router-dom';
 import $ from 'jquery';
 import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -8,5 +9,5 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
 registerServiceWorker();
