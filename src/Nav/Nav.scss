@@ -1,11 +1,26 @@
 @import '../styles/variables.scss';
   
-  .-nav-wrapper {
-    position: fixed;
-    top:0;
-    right: 17px;
-    z-index: 1000;
-    width: 100%;
+@media screen and (max-width: 768px) {
+    .-nav-inner-wrapper{
+        display: none;
+     }
+
+    .-nav-wrapper{
+        height: 60px;
+        background-color: $primary-color;
+
+    .-nav-icon{
+            display: block;
+        }
+    }
+  }
+
+.-nav-wrapper {
+position: fixed;
+top:0;
+right: 17px;
+z-index: 1000;
+width: 100%;
 
     .-nav-brand{
         float:left;
@@ -13,7 +28,6 @@
         padding:0;
 
         img{
-            box-sizing: content-box;
             margin:0;
             width: 120px;
         }
@@ -38,48 +52,30 @@
             cursor: pointer;
         }        
     }
-  }
+}
 
-  .-nav-icon {
+.-nav-icon {
     position: absolute;
     right:40px;
     top:50%;
     transform: translateY(-50%);
     display: none;
     color: $white-color;
-  }
-  
-  @media screen and (max-width: 768px) {
+}
 
-    .-nav-inner-wrapper{
-        display: none;
-     }
-
-    .-nav-wrapper{
-        height: 60px;
-        background-color: $primary-color;
-
-        .-nav-icon{
-            display: block;
-          }
-    }
-  }
-        
-    .-nav-toggler {
-        display: block;
-        position: relative;
-        top: 40px;
-        left: 40px;
-        background-color: rgba( $primary-color, 0.8);
-        
-        float: none;
-        text-align: left;
-        width: 200px;
+.-nav-toggler {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: -40px;
+    background-color: rgba( $primary-color, 0.8);        
+    float: none;
+    text-align: left;
+    width: 200px;
 
     .-nav-link{
         display: block;
         text-align: left !important;
-
     }
 
     .-nav-link:hover{
@@ -87,7 +83,7 @@
         background-color: rgba( $success-color, 0.8);
     }
 }
-    
+
 // .-nav-wrapper{
 //     position: fixed;
 //     left:-1%;

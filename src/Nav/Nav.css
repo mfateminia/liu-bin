@@ -1,3 +1,12 @@
+@media screen and (max-width: 768px) {
+  .-nav-inner-wrapper {
+    display: none; }
+
+  .-nav-wrapper {
+    height: 60px;
+    background-color: #004080; }
+    .-nav-wrapper .-nav-icon {
+      display: block; } }
 .-nav-wrapper {
   position: fixed;
   top: 0;
@@ -9,7 +18,6 @@
     margin-left: 40px;
     padding: 0; }
     .-nav-wrapper .-nav-brand img {
-      box-sizing: content-box;
       margin: 0;
       width: 120px; }
   .-nav-wrapper .-nav-inner-wrapper {
@@ -35,20 +43,11 @@
   display: none;
   color: #ffffff; }
 
-@media screen and (max-width: 768px) {
-  .-nav-inner-wrapper {
-    display: none; }
-
-  .-nav-wrapper {
-    height: 60px;
-    background-color: #004080; }
-    .-nav-wrapper .-nav-icon {
-      display: block; } }
 .-nav-toggler {
   display: block;
-  position: relative;
-  top: 40px;
-  left: 40px;
+  position: absolute;
+  top: 30px;
+  right: -40px;
   background-color: rgba(0, 64, 128, 0.8);
   float: none;
   text-align: left;
