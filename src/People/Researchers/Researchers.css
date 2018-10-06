@@ -1,0 +1,16 @@
+.-researchers-item-wrapper {
+  padding: 0;
+  padding-right: 20px;
+  margin-top: 20px; }
+  .-researchers-item-wrapper .-researchers-inner-wrapper {
+    background-color: #deebf7; }
+    .-researchers-item-wrapper .-researchers-inner-wrapper .-researcher-image {
+      width: 120px;
+      float: left; }
+    .-researchers-item-wrapper .-researchers-inner-wrapper p {
+      padding: 0;
+      margin: 0; }
+
+@media only screen and (max-width: 786px) {
+  .-researchers-item-wrapper .-researcher-image {
+    display: none; } }

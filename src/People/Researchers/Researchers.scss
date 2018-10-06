@@ -1,0 +1,27 @@
+@import '../../styles/variables.scss';
+
+.-researchers-item-wrapper{
+    padding:0;
+    padding-right: 20px;
+    margin-top: 20px;
+
+    .-researchers-inner-wrapper{
+        background-color: $secondary-color;
+
+        .-researcher-image{
+            width: 120px;
+            float: left;
+        }
+    
+        p{
+            padding: 0;
+            margin:0;
+        }
+    }
+}
+
+@media only screen and (max-width: 786px){
+    .-researchers-item-wrapper .-researcher-image{
+        display: none;
+    }
+}

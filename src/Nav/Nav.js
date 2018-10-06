@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Nav.css';
 import logo from '../img/logo.png';
 
@@ -26,12 +27,10 @@ class Nav extends React.Component {
                 <i className = "fa fa-bars"></i>
             </a>
             <div className = {this.state.classNames}>
-
-                    <a href="#home" className = '-nav-link'>HOME</a>
-                    <a href="#news" className = '-nav-link'>PUBLICATIONS</a>
-                    <a href="#contact" className = '-nav-link'>PEOPLE</a>
-                    <a href="#about" className = '-nav-link'>CONTACT</a>
-
+                    <Link to = {'/'} className = '-nav-link'>HOME</Link>
+                    <Link to = '/publications' className = '-nav-link'>PUBLICATIONS</Link>
+                    <Link to = '/people' className = '-nav-link'>PEOPLE</Link>
+                    <Link to = '/contact' className = '-nav-link'>CONTACT</Link>
             </div>
 
         </div>

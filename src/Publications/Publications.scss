@@ -1,0 +1,42 @@
+@import '../styles/variables.scss';
+
+a.-publications-item{
+    text-decoration: none;
+    display: block;
+    border-top: 0.5px solid $secondary-color;
+    border-bottom: 0.5px solid $secondary-color;
+    min-height: 150px;
+    padding: 20px;
+
+    .-publications-title{
+        font-weight: bold;
+    }
+
+    .-publications-authors{
+        margin-bottom: 5px;
+    }
+
+    .-publications-journal{
+        font-style: italic; 
+    }
+
+    .-publications-year{
+        font-weight: bold;
+    }
+
+    .-publications-volume{
+        font-style: italic; 
+    }
+}
+
+// .-publications-item:hover{
+//     color: inherit;
+//     transition: 0.3s;
+//     border-top: 0.5px solid $success-color;
+//     border-bottom: 0.5px solid $success-color;
+// }
+
+a.-publications-unfocus{
+    background-color: $secondary-color;
+    
+}
