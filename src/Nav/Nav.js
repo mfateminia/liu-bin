@@ -5,8 +5,12 @@ import logo from '../img/logo.png';
 
 class Nav extends React.Component {
     state ={
-        classNames: '-nav-inner-wrapper'
+        classNames: '-nav-inner-wrapper',
     };
+
+    scroll = () => {
+        console.log('fired');
+    }
 
     toggle = () => {
         if (this.state.classNames === '-nav-inner-wrapper') {
@@ -18,7 +22,7 @@ class Nav extends React.Component {
 
     render(){
         return(
-            <div className='-nav-wrapper'>
+            <div className='-nav-wrapper' onScroll = {this.scroll}>
             <div className = '-nav-brand'>
                 <img src = {logo}/>
             </div>

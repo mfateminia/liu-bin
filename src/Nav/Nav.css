@@ -7,6 +7,9 @@
     background-color: #004080; }
     .-nav-wrapper .-nav-icon {
       display: block; } }
+@media screen and (min-width: 768px) {
+  .-nav-wrapper {
+    background-color: rgba(0, 0, 0, 0.4); } }
 .-nav-wrapper {
   position: fixed;
   top: 0;

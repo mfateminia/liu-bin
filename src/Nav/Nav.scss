@@ -15,6 +15,12 @@
     }
   }
 
+  @media screen and (min-width: 768px) {
+    .-nav-wrapper{
+        background-color: rgba( $black-color, 0.4);
+    }
+  }
+
 .-nav-wrapper {
 position: fixed;
 top:0;
