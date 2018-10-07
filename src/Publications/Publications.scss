@@ -1,5 +1,9 @@
 @import '../styles/variables.scss';
 
+.-publications-wrapper{
+    margin-top: $margin-top-all-pages;
+}
+
 a.-publications-item{
     text-decoration: none;
     display: block;

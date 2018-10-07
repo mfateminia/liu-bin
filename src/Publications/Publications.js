@@ -40,7 +40,7 @@ class Publications extends React.Component{
     }
 
     render(){
-        return <div id = '-publications-top' className = 'container'>{this.buildPublications()}</div>;
+        return <div className = '-publications-wrapper container'>{this.buildPublications()}</div>;
     }
 }
 
