@@ -12,8 +12,8 @@ const HeroImage = () =>{
                 </div>
 
                 <div className ="-hero-image-text-wrapper container-fluid">
-                    <h1 classsName = '-hero-image-heading'>Liu's Research Group</h1>
-                    <p>where Chemistry, Materials, and Biology meet to create unique nanoprobes for theranostic applications</p>
+                    <h1 id = '-hero-image-heading'>Liu's Research Group</h1>
+                    <p id = '-hero-image-parag'>where Chemistry, Materials, and Biology meet to create unique nanoprobes for theranostic applications</p>
                     <div className = '-hero-image-button'>
                         Be a part of our network
                     </div>
