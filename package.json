@@ -2,6 +2,7 @@
   "name": "my-lib",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "http://mfateminia.github.io/my-lib",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
     "@fortawesome/free-solid-svg-icons": "^5.3.1",
@@ -31,7 +32,6 @@
     "file-loader": "1.1.5",
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
-    "homepage" : "http://mfateminia.github.io/my-lib",
     "jest": "20.0.4",
     "jquery": "^3.3.1",
     "object-assign": "4.1.1",
@@ -57,7 +57,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
