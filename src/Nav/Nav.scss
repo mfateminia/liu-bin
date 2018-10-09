@@ -1,5 +1,30 @@
 @import '../styles/variables.scss';
   
+@media screen and (min-width: 768px) {
+    .-nav-wrapper{
+        background-color: rgba( $black-color, 0.4);
+    }
+
+    .-nav-link{
+        position: relative;
+    }
+
+    .-nav-link::before{
+        content: "";
+        background: $success-color;
+        display: block;
+        height: 16px;
+        position: absolute;
+        top: 14px;
+        left: 0px;
+        width: 1px;
+    }
+
+    .-nav-link:first-child::before{
+        display: noneclea;
+    }
+  }
+
 @media screen and (max-width: 768px) {
     .-nav-inner-wrapper{
         display: none;
@@ -9,22 +34,21 @@
         height: 60px;
         background-color: $primary-color;
 
+
     .-nav-icon{
             display: block;
         }
     }
-  }
 
-  @media screen and (min-width: 768px) {
-    .-nav-wrapper{
-        background-color: rgba( $black-color, 0.4);
+    .-nav-link::before{
+        display: none;
     }
   }
 
 .-nav-wrapper {
 position: fixed;
 top:0;
-right: 17px;
+right: 0px;
 z-index: 1000;
 width: 100%;
 
@@ -113,16 +137,7 @@ width: 100%;
 //         }
 //     }
 
-//     .nav-item:before{
-//         content: "";
-//         background: $success-color;
-//         display: block;
-//         height: 16px;
-//         position: absolute;
-//         top: 10px;
-//         left: 0px;
-//         width: 1px;
-//     }
+
 
 //     .nav-item:first-child:before{
 //         display: none;
