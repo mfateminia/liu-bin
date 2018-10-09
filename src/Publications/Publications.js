@@ -18,10 +18,10 @@ class Publications extends React.Component{
     }
 
     buildPublications = () => {
-        return PublicationsAPI.map((item) => {
+        return PublicationsAPI.map((item, index) => {
             var link = 'https://dx.doi.org/' + item.doi;
              return (
-                <a className = '-publications-item' href = {link}>                                
+                <a className = '-publications-item' href = {link} key = {item.doi}>                                
                     <p className = '-publications-title'>
                         {item.title}
                     </p> 

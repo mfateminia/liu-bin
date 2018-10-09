@@ -6,7 +6,7 @@ const fullName = (firstName, lastName) => firstName + ' ' + lastName.toUpperCase
 
 const ResearchersBuilder = (ResearchersList) => {
     return (ResearchersList.map((researcher, index) => {return (
-        <div className = '-researchers-item-wrapper col-sm-6'>
+        <div className = '-researchers-item-wrapper col-sm-6' key = {researcher.email}>
             <div className = '-researchers-inner-wrapper clearfix'>
                 <img className = '-researcher-image' src = {process.env.PUBLIC_URL + './img/people/' + researcher.imageName} alt = 'not found!'/>
                 <div className = '-researcher-text'>

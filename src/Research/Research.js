@@ -36,7 +36,7 @@ const ResearchBuilder = (items) => {
     return (
         items.map((item,index)=>{
             return (
-                <div className = '-research-outer-wrapper container'>
+                <div className = '-research-outer-wrapper container' key = {index}>
                     <p className = '-research-header'>
                         {item.header}
                     </p>
