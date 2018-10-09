@@ -24,7 +24,7 @@ class Nav extends React.Component {
         return(
             <div className='-nav-wrapper' onScroll = {this.scroll}>
             <div className = '-nav-brand'>
-                <img src = {logo}/>
+                <img src = {logo} alt = 'not found!'/>
             </div>
 
             <a href="javascript:void(0);" className = '-nav-icon' onClick={this.toggle}>
