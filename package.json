@@ -2,7 +2,7 @@
   "name": "my-lib",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://cheed.nus.edu.sg",
+  "homepage": "http://cheed.nus.edu.sg/stf/cheliub/test",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
     "@fortawesome/free-solid-svg-icons": "^5.3.1",
