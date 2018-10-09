@@ -8,7 +8,7 @@ const ResearchersBuilder = (ResearchersList) => {
     return (ResearchersList.map((researcher, index) => {return (
         <div className = '-researchers-item-wrapper col-sm-6'>
             <div className = '-researchers-inner-wrapper clearfix'>
-                <img className = '-researcher-image' src = {process.env.PUBLIC_URL + './img/people/' + researcher.imageName}/>
+                <img className = '-researcher-image' src = {process.env.PUBLIC_URL + './img/people/' + researcher.imageName} alt = 'not found!'/>
                 <div className = '-researcher-text'>
                     <p className = '-researcher-name'>{fullName(researcher.firstName, researcher.lastName)}</p>
                     <p className = '-researcher-rank'>{researcher.rank}</p>

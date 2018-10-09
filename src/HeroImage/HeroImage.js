@@ -7,7 +7,7 @@ const HeroImage = () =>{
         <div id = '-hero-image-top' className = '-hero-image-outer-wrapper'>
             <div className = '-hero-image-inner-wrapper'>
                 <div className = '-hero-image-image-wrapper'>
-                        <img className = '-hero-image-image' src = {heroImage} />
+                        <img className = '-hero-image-image' src = {heroImage} alt = 'not found!' />
                         <div className = '-hero-image-overlay'></div>
                 </div>
 

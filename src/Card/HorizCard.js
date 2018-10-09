@@ -7,7 +7,7 @@ const HorizCard = (props) => {
         <div className = '-card-wrapper container clearfix p-4 bg-secondary'>
             <div className = 'row'>
                 <div className = 'col-md-4'>
-                    <img className = 'img-fluid' src = {props.imgUrl} alt = 'Image not found!'/>
+                    <img className = 'img-fluid' src = {props.imgUrl} alt = 'not found!'/>
                 </div>
                 
                 <div className = '-card-body col-md-8'>

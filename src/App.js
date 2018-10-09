@@ -4,7 +4,6 @@ import Nav from './Nav/Nav';
 import HeroImage from './HeroImage/HeroImage';
 import HorizCard from './Card/HorizCard';
 import Footer from './Footer/Footer';
-import News from './News/News';
 import Research from './Research/Research';
 import People from './People/People';
 import Publications from './Publications/Publications';
