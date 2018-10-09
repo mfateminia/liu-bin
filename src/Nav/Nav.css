@@ -16,7 +16,7 @@
     width: 1px; }
 
   .-nav-link:first-child::before {
-    display: noneclea; } }
+    display: none; } }
 @media screen and (max-width: 768px) {
   .-nav-inner-wrapper {
     display: none; }

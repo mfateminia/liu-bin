@@ -12,8 +12,13 @@ class Nav extends React.Component {
         console.log('fired');
     }
 
-    toggle = () => {
-        if (this.state.classNames === '-nav-inner-wrapper') {
+    /*This is to toggle the navigation bar in collapsed mode
+    Arg: closeOnly is added to use toggler to close the nav when moving to another page only in collapsed mode
+    in this case we just want to close the toggler if it is open
+    if we don't have the closeOnly option, the toggler will work when changing page in expanded version as well.
+    */
+    toggle = (closeOnly) => {
+        if (!closeOnly && (this.state.classNames === '-nav-inner-wrapper')) {
             this.setState({classNames: '-nav-inner-wrapper -nav-toggler'});
         } else {
             this.setState({classNames: '-nav-inner-wrapper'});
@@ -27,14 +32,14 @@ class Nav extends React.Component {
                 <img src = {logo} alt = 'not found!'/>
             </div>
 
-            <a href="javascript:void(0);" className = '-nav-icon' onClick={this.toggle}>
+            <a href="javascript:void(0);" className = '-nav-icon' onClick={this.toggle.bind(this, false)}>
                 <i className = "fa fa-bars"></i>
             </a>
             <div className = {this.state.classNames}>
-                    <Link to = {'/'} className = '-nav-link'>HOME</Link>
-                    <Link to = '/publications' className = '-nav-link'>PUBLICATIONS</Link>
-                    <Link to = '/people' className = '-nav-link'>PEOPLE</Link>
-                    <Link to = '/contact' className = '-nav-link'>CONTACT</Link>
+                    <Link to = {'/'} className = '-nav-link' onClick={this.toggle.bind(this, true)}>HOME</Link>
+                    <Link to = '/publications' className = '-nav-link' onClick={this.toggle.bind(this, true)}>PUBLICATIONS</Link>
+                    <Link to = '/people' className = '-nav-link' onClick={this.toggle.bind(this, true)}>PEOPLE</Link>
+                    <Link to = '/contact' className = '-nav-link' onClick={this.toggle.bind(this, true)}>CONTACT</Link>
             </div>
 
         </div>
