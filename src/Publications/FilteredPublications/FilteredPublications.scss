@@ -1,0 +1,38 @@
+@import '../../styles/variables.scss';
+
+.-filtered-wrapper{
+    margin-top: $margin-top-all-pages;
+}
+
+.-filtered-search-box-wrapper{
+    background-color: $secondary-color;
+    padding: 10px;
+}
+
+.-filtered-search-input{
+    margin: 10px 5px;
+    height: 40px;
+}
+
+.-filtered-search-dropdown{
+    height: 40px;
+    margin: 0 5px;
+    padding: 0 5px;
+}
+
+.-filtered-search-button{
+    margin: 0 5px;    
+    height: 40px;
+}
+
+@media screen and (min-width: 425px){
+    .-filtered-search-input{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .-filtered-search-input{
+        width: 100%;
+    }
+}

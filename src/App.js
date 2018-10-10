@@ -6,7 +6,7 @@ import HorizCard from './Card/HorizCard';
 import Footer from './Footer/Footer';
 import Research from './Research/Research';
 import People from './People/People';
-import Publications from './Publications/Publications';
+import FilteredPublications from './Publications/FilteredPublications/FilteredPublications';
 import './App.css';
 
 class App extends Component {
@@ -17,7 +17,7 @@ class App extends Component {
         <Route path='/' exact component={HeroImage} />
         <Route path='/' exact render = {()=> <h1 className = '-app-titles container'>Research</h1>} />
         <Route path='/' exact component={Research} />
-        <Route path='/publications' exact component={Publications} />
+        <Route path='/publications' exact component={FilteredPublications} />
         <Route path='/people' exact component={People} />
 
         <h1 className = '-app-titles container'>Recent Publications</h1>

@@ -1,9 +1,5 @@
 @import '../styles/variables.scss';
 
-.-publications-wrapper{
-    margin-top: $margin-top-all-pages;
-}
-
 a.-publications-item{
     text-decoration: none;
     display: block;
@@ -33,14 +29,8 @@ a.-publications-item{
     }
 }
 
-// .-publications-item:hover{
-//     color: inherit;
-//     transition: 0.3s;
-//     border-top: 0.5px solid $success-color;
-//     border-bottom: 0.5px solid $success-color;
-// }
-
-a.-publications-unfocus{
+.-publications-item:hover{
+    color: inherit;
+    transition: 0.3s;
     background-color: $secondary-color;
-    
 }
