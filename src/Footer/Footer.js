@@ -11,7 +11,7 @@ const Footer = () => {
                 <div className = 'row'>
                     <div className = 'col-11 row'>
                         <div className = '-footer-address col-md-7 order-2 order-md-1'>                        
-                            Address: National University of Singapore
+                            National University of Singapore,
                             Department of Chemical and Biomolecular Engineering, 
                             4 Engineering Drive 4, Blk E5 #02-17,
                             Singapore 117585 
