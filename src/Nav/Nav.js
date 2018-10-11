@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Nav.css';
-import logo from '../img/logo.png';
 
 class Nav extends React.Component {
     state ={
@@ -29,7 +28,7 @@ class Nav extends React.Component {
         return(
             <div className='-nav-wrapper' onScroll = {this.scroll}>
             <div className = '-nav-brand'>
-                <img src = {logo} alt = 'not found!'/>
+                <img src = {process.env.PUBLIC_URL + '/img/logo.png'} alt = 'not found!'/>
             </div>
 
             <a href="javascript:void(0);" className = '-nav-icon' onClick={this.toggle.bind(this, false)}>

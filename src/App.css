@@ -3,7 +3,9 @@ body, html {
   overflow-x: hidden; }
 
 .-app-wrapper {
-  position: relative; }
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 250px; }
   .-app-wrapper .-app-titles {
     color: #ffc000;
     margin-top: 40px; }
