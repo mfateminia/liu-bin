@@ -1,15 +1,27 @@
 .-researchers-item-wrapper {
   padding: 0;
-  padding-right: 20px;
-  margin-top: 20px; }
+  margin-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px; }
   .-researchers-item-wrapper .-researchers-inner-wrapper {
-    background-color: #deebf7; }
+    background-color: #deebf7;
+    border-radius: 5px;
+    padding: 20px; }
     .-researchers-item-wrapper .-researchers-inner-wrapper .-researcher-image {
-      width: 120px;
-      float: left; }
-    .-researchers-item-wrapper .-researchers-inner-wrapper p {
-      padding: 0;
-      margin: 0; }
+      width: 100px;
+      height: 135px;
+      float: left;
+      margin-right: 20px; }
+
+.-researcher-text {
+  margin-left: 20px; }
+
+.-researcher-name {
+  font-weight: bold; }
+
+.-researcher-rank {
+  font-style: italic;
+  margin-bottom: 10px; }
 
 @media only screen and (max-width: 786px) {
   .-researchers-item-wrapper .-researcher-image {

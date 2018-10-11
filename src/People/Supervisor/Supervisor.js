@@ -1,6 +1,5 @@
 import React from 'react';
 import './Supervisor.css';
-import liuBin from '../../img/bin_liu.jpg';
 
 const supervisorDetails = {
     firstName: 'Bin',
@@ -19,7 +18,7 @@ const supervisorDetails = {
 const Supervisor = () => {
     return (
         <div className = '-supervisor-outer-wrapper container clearfix'>
-            <img className = '-supervisor-image' src = {liuBin} alt = 'not found!'/>
+            <img className = '-supervisor-image' src = {process.env.PUBLIC_URL + '/img/people/Bin_liu.jpg'} alt = 'not found!'/>
             <div className = '-supervisor-text row'>
                 <div className = '-supervisor-description col-sm-7'>
                     <p className = '-supervisor-name'>{supervisorDetails.fullName()}</p>

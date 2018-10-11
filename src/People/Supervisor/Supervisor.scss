@@ -3,11 +3,7 @@
 .-supervisor-outer-wrapper{
     background-color: $secondary-color;
     padding: 20px;
-
-    p{
-        padding: 0;
-        margin:0;
-    }
+    border-radius: 5px;
 }
 
 .-supervisor-image{
@@ -22,6 +18,19 @@
     p{
         margin-bottom: 10px;
     }
+}
+
+.-supervisor-name{
+    font-weight: bold;
+}
+
+.-supervisor-rank{
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.-supervisor-title{
+    margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 786px){

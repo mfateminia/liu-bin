@@ -1,9 +1,7 @@
 .-supervisor-outer-wrapper {
   background-color: #deebf7;
-  padding: 20px; }
-  .-supervisor-outer-wrapper p {
-    padding: 0;
-    margin: 0; }
+  padding: 20px;
+  border-radius: 5px; }
 
 .-supervisor-image {
   float: left;
@@ -14,6 +12,16 @@
   border-left: 1px solid #ffc000; }
   .-supervisor-contact p {
     margin-bottom: 10px; }
+
+.-supervisor-name {
+  font-weight: bold; }
+
+.-supervisor-rank {
+  font-style: italic;
+  margin-bottom: 10px; }
+
+.-supervisor-title {
+  margin-bottom: 20px; }
 
 @media only screen and (max-width: 786px) {
   .-supervisor-outer-wrapper .-supervisor-image {
