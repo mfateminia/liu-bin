@@ -1,7 +1,6 @@
 import React from 'react';
 import './HorizCard.css';
 
-//props has imgUrl, title, subtitle, text, btnLabel
 const HorizCard = (props) => {
     return (
         <div className = '-card-wrapper container clearfix p-4 bg-secondary'>

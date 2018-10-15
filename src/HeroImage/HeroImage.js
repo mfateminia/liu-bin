@@ -2,13 +2,6 @@ import React from 'react';
 import './HeroImage.css';
 
 class HeroImage extends React.Component {
-    componentDidMount(){
-        if(global.screen.height > document.getElementById('-hero-image-top').offsetHeight){
-            //dothis
-        }
-
-    }
-
     render(){
         return (
             <div id = '-hero-image-top' className = '-hero-image-outer-wrapper'>

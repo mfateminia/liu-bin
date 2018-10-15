@@ -1,7 +1,6 @@
 import React from 'react';
 import './Footer.css';
 
-
 const Footer = () => {
 	return (
 		<div className = '-footer-outer-wrapper container-fluid bg-primary text-light'>

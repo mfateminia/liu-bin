@@ -5,10 +5,10 @@ const Publications = (props) => {
 
     const buildAuthors = (authors) => {
         return ( authors.map((author, index) => {
-            if(author.firstName || author.lastName){
-                return author.firstName+' '+author.lastName +', ';
-            }
-        })
+                if(author.firstName || author.lastName){
+                    return author.firstName+' '+author.lastName +', ';
+                }
+            })
         );
     }
 

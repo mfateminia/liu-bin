@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Contact from '../Contact/Contact';
-import ClickOutside from '../ClickOutside';
 import './Nav.css';
 
 class Nav extends React.Component {
@@ -11,10 +10,6 @@ class Nav extends React.Component {
             contact: 'd-none'
         },
     };
-
-    scroll = () => {
-        console.log('fired');
-    }
 
     /*This is to toggle the navigation bar in collapsed mode
     Arg: closeOnly is added to use toggler to close the nav when moving to another page only in collapsed mode
@@ -41,7 +36,7 @@ class Nav extends React.Component {
 
     render(){
         return(
-            <div className='-nav-wrapper' onScroll = {this.scroll}>
+            <div className='-nav-wrapper'>
 
                 {/* Need key to make sure a new instance of the <Contact> is created each time updating state */}
                 <Contact displayState = {this.state.classNames.contact} key = {this.keyToRestart}/>
