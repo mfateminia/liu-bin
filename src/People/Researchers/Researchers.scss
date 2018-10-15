@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import '../../styles/global.scss';
 
 .-researchers-item-wrapper{
     padding:0;
@@ -10,6 +10,8 @@
         background-color: $secondary-color;
         border-radius: 5px;
         padding: 20px;
+        box-shadow: 0 6px 10px -6px black;
+
         .-researcher-image{
             width: 100px;
             height: 135px;
