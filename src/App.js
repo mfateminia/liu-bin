@@ -20,7 +20,7 @@ class App extends Component {
         <Route path='/' exact component={Research} />
         <Route path='/publications' exact component={FilteredPublications} />
         <Route path='/people' exact component={People} />
-        <Contact />
+        {/* <Contact /> */}
         {/* <h1 className = '-app-titles container'>Recent Publications</h1> */}
         {/* <HorizCard imgUrl = 'https://cdn.stocksnap.io/img-thumbs/960w/DGWQ8ZWZQS.jpg'
           title = 'A Light-Up Probe with Aggregation-Induced Emission for Real-Time Bio-orthogonal Tumor Labelling and Image-Guided Photodynamic Therapy'

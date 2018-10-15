@@ -17,8 +17,8 @@
       position: absolute;
       top: 0;
       left: 0;
-      height: 100%;
-      width: 100%;
+      bottom: 0;
+      right: 0;
       background-color: rgba(0, 0, 0, 0.7); }
   .-hero-image-outer-wrapper .-hero-image-text-wrapper {
     z-index: 2;
@@ -54,11 +54,11 @@
     padding-top: 60px; }
 
   #-hero-image-heading {
-    font-size: 30px;
+    font-size: 20px;
     padding-bottom: 1.5%; }
 
   #-hero-image-parag {
-    font-size: 16px;
+    font-size: 14px;
     max-width: 500px; }
 
   .-hero-image-button {
