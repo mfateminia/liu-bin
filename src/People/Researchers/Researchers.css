@@ -1,17 +1,23 @@
 .-researchers-item-wrapper {
   padding: 0;
-  margin-top: 10px;
   padding-left: 5px;
   padding-right: 5px; }
   .-researchers-item-wrapper .-researchers-inner-wrapper {
     background-color: #deebf7;
     border-radius: 5px;
-    padding: 20px; }
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 10px -6px black; }
     .-researchers-item-wrapper .-researchers-inner-wrapper .-researcher-image {
       width: 100px;
       height: 135px;
       float: left;
       margin-right: 20px; }
+
+.-researcher-google-scholar:hover {
+  text-decoration: none;
+  color: #ffc000;
+  transition: 0.3s; }
 
 .-researcher-text {
   margin-left: 20px; }
@@ -23,6 +29,6 @@
   font-style: italic;
   margin-bottom: 10px; }
 
-@media only screen and (max-width: 786px) {
+@media only screen and (max-width: 1024px) {
   .-researchers-item-wrapper .-researcher-image {
     display: none; } }

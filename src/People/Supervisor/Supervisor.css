@@ -1,7 +1,10 @@
 .-supervisor-outer-wrapper {
   background-color: #deebf7;
-  padding: 20px;
-  border-radius: 5px; }
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px -6px black; }
 
 .-supervisor-image {
   float: left;

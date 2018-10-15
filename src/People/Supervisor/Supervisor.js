@@ -7,14 +7,14 @@ const Supervisor = () => {
         <div className = '-supervisor-outer-wrapper container clearfix'>
             <img className = '-supervisor-image' src = {process.env.PUBLIC_URL + '/img/people/Bin_liu.jpg'} alt = 'not found!'/>
             <div className = '-supervisor-text row'>
-                <div className = '-supervisor-description col-sm-7'>
+                <div className = '-supervisor-description col-md-7'>
                     <p className = '-supervisor-name'>{supervisorDetails.fullName}</p>
                     <p className = '-supervisor-rank'>{supervisorDetails.rank}</p>
                     <p className = '-supervisor-title'>{supervisorDetails.title}</p>
                     <button className = '-supervisor-button btn btn-primary'>Read more</button>
                 </div>
 
-                <div className = '-supervisor-contact col-sm-5'>
+                <div className = '-supervisor-contact col-md-5'>
                     <p className = '-supervisor-email'>
                         <i className="-footer-icon fas fa-envelope"></i>
                         {supervisorDetails.email}

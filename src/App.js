@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Nav from './Nav/Nav';
 import HeroImage from './HeroImage/HeroImage';
-import Footer from './Footer/Footer';
 import Research from './Research/Research';
+import FeaturedPapers from './FeaturedPapers/FeaturedPapers';
 import People from './People/People';
 import FilteredPublications from './Publications/FilteredPublications/FilteredPublications';
+import Footer from './Footer/Footer';
 import './App.css';
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
         <Route path='/' exact component={HeroImage} />
         <Route path='/' exact render = {()=> <h1 className = '-app-titles container'>Research</h1>} />
         <Route path='/' exact component={Research} />
+        <Route path='/' exact component={FeaturedPapers} />
         <Route path='/publications' exact component={FilteredPublications} />
         <Route path='/people' exact component={People} />
         <Footer />        

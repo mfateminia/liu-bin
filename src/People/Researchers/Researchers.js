@@ -6,7 +6,7 @@ const fullName = (firstName, lastName) => firstName + ' ' + lastName.toUpperCase
 
 const ResearchersBuilder = (ResearchersList) => {
     return (ResearchersList.map((researcher, index) => {return (
-        <div className = '-researchers-item-wrapper col-sm-6' key = {researcher.email}>
+        <div className = '-researchers-item-wrapper col-md-6' key = {researcher.email}>
             <div className = '-researchers-inner-wrapper clearfix'>
                 <img className = '-researcher-image' src = {process.env.PUBLIC_URL + '/img/people/' + researcher.imageName} alt = 'not found!'/>
                 <div className = '-researcher-text'>
@@ -16,12 +16,10 @@ const ResearchersBuilder = (ResearchersList) => {
                         <i className="-footer-icon fas fa-envelope"></i>
                         {researcher.email}
                     </p>
-                    <p className = '-researcher-google-scholar'>
+                    <a className = '-researcher-google-scholar' href = {researcher.googleScholar} target = '_blank'>
                         <i className = "-footer-icon ai ai-google-scholar-square "></i>
-                        <a href = {researcher.googleScholar} target = '_blank'>
-                        Google Scholar
-                        </a>                
-                    </p>
+                        Google Scholar            
+                    </a>
                 </div>
             </div>
         </div>

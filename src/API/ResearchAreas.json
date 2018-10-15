@@ -1,9 +1,24 @@
 [
     {
-        "header": "Synthesis of aggregation induced emission fluorogens",
-        "content": "Unlike conventional fluorophores which usually exhibit quenched emission at high concentration or in aggregate state, fluorogens with aggregation-induced emission (AIE) characteristics show exactly the opposite phenomenon. Typical AIE fluorogens are characterized by their propeller-shaped rotorlike structures, which undergo low-frequency torsional motions as isolated molecules and emit very weakly in solutions. Our research focuses on two approaches to utilize AIE effect in the development of fluorescent bioprobes. On the one hand, these fluorogens can be engineered",
-        "image": "",
-        "ref": {
+        "header": "Bioprobes based on fluorogens with aggregation-induced emission (AIE) characteristics",
+        "content": "Unlike conventional fluorophores which usually exhibit quenched emission at high concentration or in aggregate state, fluorogens with aggregation-induced emission (AIE) characteristics show exactly the opposite phenomenon. Typical AIE fluorogens are characterized by their propeller-shaped rotorlike structures, which undergo low-frequency torsional motions as isolated molecules and emit very weakly in solutions. Their aggregates show strong fluorescence mainly due to the restriction of their intramolecular rotations in the aggregate state. This fascinating attribute of AIE fluorogens provides a new platform for the development of fluorescence light-up molecules and photostable nanoaggregates for specific analyte detection and imaging. Our research focuses on two approaches to utilize AIE effect in the development of fluorescent bioprobes. ",
+        "image": "research_area_aie.jpg",
+        "ref": [{
+            "title": "A Light-Up Probe with Aggregation-Induced Emission for Real-Time Bio-orthogonal Tumor Labelling and Image-Guided Photodynamic Therapy",
+            "authors": "Guangxue Feng et al",
+            "journal": "Acc. Chem. Res.",
+            "year": "2018",
+            "volume": "51",
+            "page": "1404",
+            "link": "https://onlinelibrary.wiley.com/doi/abs/10.1002/anie.201805446"
+        }]
+    },
+    {
+        "header": "Conjugated Polymers for Bioimaging and Cellular Detection",
+        "content": "Conjugated Polymers (CPs) represent macromolecular fluorophores with highly de-localized π-conjugated backbones. This unique backbone structures bestow CPs with strong light-harvesting and light-amplification properties, highly promising for fluorescence imaging and other related biological applications. However, the lack of sufficient water solubility have greatly hampered the potentials. Besides design and synthesis of novel CPs with multi-functions, our group have consistently put great efforts on the development of new strategies to render CPs with excellent and stable water-dispersbility. Our group’s research has been focused on the development of CPs with red-shifted emission, especially in near infrared (NIR) region with high fluorescence quantum yields. ",
+        "image": "research_area_cp.jpg",
+        "ref": [
+            {
             "title": "A Light-Up Probe with Aggregation-Induced Emission for Real-Time Bio-orthogonal Tumor Labelling and Image-Guided Photodynamic Therapy",
             "authors": "Guangxue Feng et al",
             "journal": "Acc. Chem. Res.",
@@ -11,6 +26,16 @@
             "volume": "51",
             "page": "1404",
             "link": ""
+        },
+        {
+            "title": "Micelle/Silica Co-protected Conjugated Polymer Nanoparticles for Two-Photon Excited Brain Vascular Imaging",
+            "authors": "Junlong Geng et al",
+            "journal": "Chem. Mater.",
+            "year": "2014",
+            "volume": "26",
+            "page": "1874",
+            "link": "https://pubs.acs.org/doi/10.1021/cm4040374"            
         }
+    ]
     }
 ]
