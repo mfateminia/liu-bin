@@ -8,7 +8,7 @@ class Nav extends React.Component {
         super(props);
         this.state = {
             isTogglerOpen: false,
-            isContactOpen: false
+            shouldOpenContact: false
         };
 
         this.classNames = {
@@ -43,10 +43,21 @@ class Nav extends React.Component {
         this.closeToggler();
     }
 
+    handleContact = () => {
+        if(this.state.shouldOpenContact){
+            return <Contact onVisibilityChange = {this.toggleContact.bind(this)}/>
+        }
+        else return null;
+    }
+
+    toggleContact(shouldOpenContact){
+        this.setState({shouldOpenContact});
+    }
+
     render(){
         return(
             <div className='-nav-wrapper'>
-                <Contact displayState = {this.classNames.contact} key = {this.keyToRestart}/>
+                {this.handleContact(this.state.shouldOpenContact)}
                 <div className = '-nav-brand'>
                     <img src = {process.env.PUBLIC_URL + '/img/logo.png'} alt = 'not found!'/>
                 </div>
@@ -58,7 +69,7 @@ class Nav extends React.Component {
                         <Link to = {'/'} className = '-nav-link' onClick = {this.closeToggler}>HOME</Link>
                         <Link to = '/publications' className = '-nav-link' onClick = {this.closeToggler}>PUBLICATIONS</Link>
                         <Link to = '/people' className = '-nav-link' onClick = {this.closeToggler}>PEOPLE</Link>
-                        <a className = '-nav-link' onClick = {this.openContact}>CONTACT</a>
+                        <a className = '-nav-link' onClick = {this.toggleContact.bind(this, true)}>CONTACT</a>
                 </div>
             </div>
         );

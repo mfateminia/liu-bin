@@ -4,11 +4,13 @@ import './Contact.css';
 class Contact extends React.Component{
 
     state = {        
-        classNames : '-contact-wrapper ' + this.props.displayState
+        classNames : '-contact-wrapper'
     }
 
+
+
     closeIt = () => {
-        this.setState({classNames: '-contact-wrapper d-none'});
+        this.props.onVisibilityChange(false);
     }    
 
     render(){
