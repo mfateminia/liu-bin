@@ -4,53 +4,60 @@ import Contact from '../Contact/Contact';
 import './Nav.css';
 
 class Nav extends React.Component {
-    state ={
-        classNames: {
+    constructor(props){
+        super(props);
+        this.state = {
+            isTogglerOpen: false,
+            isContactOpen: false
+        };
+
+        this.classNames = {
             toggler: '-nav-inner-wrapper',
             contact: 'd-none'
-        },
-    };
+        }
 
-    /*This is to toggle the navigation bar in collapsed mode
-    Arg: closeOnly is added to use toggler to close the nav when moving to another page only in collapsed mode
-    in this case we just want to close the toggler if it is open
-    if we don't have the closeOnly option, the toggler will work when changing page in expanded version as well.
-    */
-    toggle = (closeOnly) => {
-        if (!closeOnly && (this.state.classNames.toggler === '-nav-inner-wrapper')) {
-            this.setState({classNames: {toggler: '-nav-inner-wrapper -nav-toggler', contact: 'd-none'}});
+        this.keyToRestart = true;
+    }
+
+    toggleNav = () => {
+        if (this.state.isTogglerOpen) {
+            this.closeToggler();
         } else {
-            this.setState({classNames: {toggler: '-nav-inner-wrapper', contact: 'd-none'}});
+            this.openToggler();            
         }
     }
 
-    //Need this to make sure a new instance of the <Contact> is created each time updating state
-    keyToRestart = true;
+    openToggler = () => {
+        this.classNames.toggler =  '-nav-inner-wrapper -nav-toggler';
+        this.setState({isTogglerOpen: true});        
+    }
+
+    closeToggler = () => {
+        this.classNames.toggler =  '-nav-inner-wrapper' ;      
+        this.setState({isTogglerOpen: false});
+    }
 
     openContact = () => {
-        this.setState({classNames: {toggler:'-nav-inner-wrapper', contact: ''}});
-
-        //To make sure key in <Contact> different each time this function is called
+        this.classNames.contact = 'd-block';
         this.keyToRestart = !this.keyToRestart;
+        this.closeToggler();
     }
 
     render(){
         return(
             <div className='-nav-wrapper'>
-
-                {/* Need key to make sure a new instance of the <Contact> is created each time updating state */}
-                <Contact displayState = {this.state.classNames.contact} key = {this.keyToRestart}/>
+                <Contact displayState = {this.classNames.contact} key = {this.keyToRestart}/>
                 <div className = '-nav-brand'>
                     <img src = {process.env.PUBLIC_URL + '/img/logo.png'} alt = 'not found!'/>
                 </div>
 
-                <a href="javascript:void(0);" className = '-nav-icon' onClick={this.toggle.bind(this, false)}>
+                <a href="javascript:void(0);" className = '-nav-icon' onClick={this.toggleNav}>
                     <i className = "fa fa-bars"></i>
                 </a>
-                <div className = {this.state.classNames.toggler}>
-                        <Link to = {'/'} className = '-nav-link' onClick={this.toggle.bind(this, true)}>HOME</Link>
-                        <Link to = '/publications' className = '-nav-link' onClick={this.toggle.bind(this, true)}>PUBLICATIONS</Link>
-                        <Link to = '/people' className = '-nav-link' onClick={this.toggle.bind(this, true)}>PEOPLE</Link>
+                <div className = {this.classNames.toggler}>
+                        <Link to = {'/'} className = '-nav-link' onClick = {this.closeToggler}>HOME</Link>
+                        <Link to = '/publications' className = '-nav-link' onClick = {this.closeToggler}>PUBLICATIONS</Link>
+                        <Link to = '/people' className = '-nav-link' onClick = {this.closeToggler}>PEOPLE</Link>
                         <a className = '-nav-link' onClick = {this.openContact}>CONTACT</a>
                 </div>
             </div>
