@@ -10,7 +10,7 @@ class Contact extends React.Component{
 
 
     closeIt = () => {
-        this.props.onVisibilityChange(false);
+        this.props.contactVisibility(false);
     }    
 
     render(){
