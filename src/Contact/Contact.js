@@ -1,22 +1,13 @@
 import React from 'react';
+import { observer, inject } from 'mobx-react';
 import './Contact.css';
 
 class Contact extends React.Component{
 
-    state = {        
-        classNames : '-contact-wrapper'
-    }
-
-
-
-    closeIt = () => {
-        this.props.contactVisibility(false);
-    }    
-
     render(){
         return (
-            <div className = {this.state.classNames}>
-            <a className = "-contact-close" onClick = {this.closeIt}></a>
+            <div className = '-contact-wrapper'>
+            <a className = "-contact-close" onClick = {this.props.store.showContact.bind(this, false)}></a>
             <p className = '-contact-header'>Feel free to contact us on:</p>
                 <p className = '-contact-item'>
                     <i className="-contact-icon fas fa-envelope"></i>
@@ -43,4 +34,4 @@ class Contact extends React.Component{
     }
 }
 
-export default Contact;
+export default inject('store')(observer(Contact));
