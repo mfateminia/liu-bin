@@ -1,13 +1,10 @@
 import React from 'react';
+import { inject, observer } from 'mobx-react';
 import Publications from '../Publications';
 import './FilteredPublications.css';
 import PublicationsAPI from '../../API/Publications.json';
 
 class FilteredPublications extends React.Component {
-    state = {
-        filteredPublications: [...PublicationsAPI],
-
-    };
 
     filterThem = () => {
         const textFilterValue = document.getElementById('-filtered-search-input-id').value;
@@ -27,9 +24,7 @@ class FilteredPublications extends React.Component {
             filteredResults = filteredResults.filter(item => (item.type == typeFilterValue));
         }
 
-
-        this.setState({
-            filteredPublications: [...filteredResults]});
+        this.props.store.applyFilters(filteredResults);
     }
 
     clearFilters = () => {
@@ -59,10 +54,10 @@ class FilteredPublications extends React.Component {
                     </form>
                 </div>
 
-                <Publications toShow = {this.state.filteredPublications}/>
+                <Publications toShow = {this.props.store.filteredPublications}/>
             </div>
         );
     } 
 }
 
-export default FilteredPublications;
+export default inject('store')(observer(FilteredPublications));

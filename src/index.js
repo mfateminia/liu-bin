@@ -1,7 +1,7 @@
 import './styles/bootstrap.css';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'mobx-react';
-import Store from './Store/Store'
+import Store from './Store/Store';
 import $ from 'jquery';
 import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';

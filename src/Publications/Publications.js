@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollToTop from '../ScrollToTop/ScrollToTop'
 import './Publications.css';
 
 const Publications = (props) => {
@@ -13,6 +14,7 @@ const Publications = (props) => {
     }
 
     const buildPublications = () => {
+        ScrollToTop();
         return props.toShow.map((item, index) => {
             var link = 'https://dx.doi.org/' + item.doi;
             return (
