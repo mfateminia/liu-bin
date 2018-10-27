@@ -5,7 +5,7 @@ import HeroImage from './HeroImage/HeroImage';
 import Research from './Research/Research';
 import FeaturedPapers from './FeaturedPapers/FeaturedPapers';
 import People from './People/People';
-import FilteredPublications from './Publications/FilteredPublications/FilteredPublications';
+import Publications from './Publications/Publications';
 import Footer from './Footer/Footer';
 import './App.css';
 
@@ -18,7 +18,7 @@ class App extends Component {
         <Route path='/' exact render = {()=> <h1 className = '-app-titles container'>Research</h1>} />
         <Route path='/' exact component={Research} />
         <Route path='/' exact component={FeaturedPapers} />
-        <Route path='/publications' exact component={FilteredPublications} />
+        <Route path='/publications' exact component={Publications} />
         <Route path='/people' exact component={People} />
         <Footer />        
       </div>
