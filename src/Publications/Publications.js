@@ -5,6 +5,55 @@ import PublicationsAPI from '../API/Publications.json';
 
 class FilteredPublications extends React.Component {
 
+    buildSearchBox(PublicationsAPI){
+        return (
+            <div className = '-publications-search-box-wrapper'>
+                <form id = '-publications-search-form-id' className = '-publications-search-box'>
+                    <input id = '-publications-search-input-id' className = '-publications-search-input' type="text" placeholder = 'Search in publications' onChange = {this.filterThem}></input>
+                    <select id = '-publications-search-year-id' className = '-publications-search-dropdown' onChange = {this.filterThem}>
+                        {this.buildYearsFilter()}
+                    </select>
+                    <select id = '-publications-search-type-id' className = '-publications-search-dropdown' onChange = {this.filterThem}>
+                        {this.buildTypesFilter()}
+                    </select>
+                    <button className = '-publications-search-button' onClick = {this.clearFilters}>Clear</button>
+                </form>
+            </div>
+        );
+    }
+
+    buildYearsFilter(){
+        let yearsArr = PublicationsAPI.map(item => item.year);
+        yearsArr = this.uniqueSort(yearsArr);
+
+        yearsArr.unshift('All years');
+        return yearsArr.map((item, index) => <option key = {index}>{item}</option>);        
+    }
+
+    buildTypesFilter(){
+        let typesArr = PublicationsAPI.map(item => item.type);
+        typesArr = this.uniqueSort(typesArr);
+
+        typesArr.unshift('All Types');
+        return typesArr.map((item, index) => <option key = {index}>{item}</option>);
+    }
+
+    uniqueSort(arr){
+        if (arr.length === 0) return null;
+
+        //sort array
+        isNaN(arr[0])? arr = arr.sort() : arr = arr.sort((a, b) => b - a)
+
+        //remove duplicates
+        let uniqueSorted = [arr[0]];
+        for (let i = 1; i < arr.length; i++) {
+          if (arr[i-1] !== arr[i]) {
+            uniqueSorted.push(arr[i]);
+          }
+        }
+        return uniqueSorted;
+    }
+
     filterThem = () => {
         const textFilterValue = document.getElementById('-publications-search-input-id').value;
         const yearFilterValue = document.getElementById('-publications-search-year-id').value;
@@ -15,12 +64,12 @@ class FilteredPublications extends React.Component {
             filteredResults = filteredResults.filter(item => (item.title.toLowerCase().includes(textFilterValue.toLowerCase())));
         } 
 
-        if(yearFilterValue != 'all-years'){
-            filteredResults = filteredResults.filter(item => (item.year == yearFilterValue));
+        if(yearFilterValue !== 'All years'){
+            filteredResults = filteredResults.filter(item => (item.year === yearFilterValue));
         }
 
-        if(typeFilterValue != 'all-types'){
-            filteredResults = filteredResults.filter(item => (item.type == typeFilterValue));
+        if(typeFilterValue !== 'All Types'){
+            filteredResults = filteredResults.filter(item => (item.type === typeFilterValue));
         }
 
         this.props.store.applyFilters(filteredResults);
@@ -44,7 +93,7 @@ class FilteredPublications extends React.Component {
                     <p className = '-publications-address'>
                         <span className = '-publications-journal'>{item.containerTitle}</span>, 
                         <span className = '-publications-year'> {item.year}</span>, 
-                        <span className = '-publications-volume'> {item.volume}</span>, 
+                        <span className = '-publications-volume'>{item.volume || 'hahaha'}</span>, 
                         <span className = '-publications-page'> {item.page}</span>
                     </p>                                                                 
                 </a> 
@@ -57,6 +106,7 @@ class FilteredPublications extends React.Component {
                 if(author.firstName || author.lastName){
                     return author.firstName+' '+author.lastName +', ';
                 }
+                return null;
             })
         );
     }
@@ -64,26 +114,7 @@ class FilteredPublications extends React.Component {
     render(){
         return (
             <div className = '-publications-wrapper  container'>
-                <div className = '-publications-search-box-wrapper'>
-                    <form id = '-publications-search-form-id' className = '-publications-search-box'>
-                        <input id = '-publications-search-input-id' className = '-publications-search-input' type="text" placeholder = 'Search in publications' onChange = {this.filterThem}></input>
-                        <select id = '-publications-search-year-id' className = '-publications-search-dropdown' onChange = {this.filterThem}>
-                            <option value="all-years">All years</option>
-                            <option value="2018">2018</option>
-                            <option value="2017">2017</option>
-                            <option value="2016">2016</option>
-                            <option value="2015">2015</option>
-                        </select>
-                        <select id = '-publications-search-type-id' className = '-publications-search-dropdown' onChange = {this.filterThem}>
-                            <option value="all-types">All types</option>
-                            <option value="book-chapter">Books</option>
-                            <option value="journal-article">Journals</option>
-                            <option value="patents">Patents</option>
-                        </select>
-                        <button className = '-publications-search-button' onClick = {this.clearFilters}>Clear</button>
-                    </form>
-                </div>
-
+                {this.buildSearchBox(PublicationsAPI)}
                 {this.buildPublications(this.props.store.filteredPublications)}
             </div>
         );
