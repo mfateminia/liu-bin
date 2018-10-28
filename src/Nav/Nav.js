@@ -21,7 +21,7 @@ class Nav extends React.Component {
                     <img src = {process.env.PUBLIC_URL + '/img/logo.png'} alt = 'not found!'/>
                 </div>
 
-                <a href="javascript:void(0);" className = '-nav-icon' onClick = {this.props.store.toggleNav}>
+                <a href="" className = '-nav-icon' onClick = {e => this.props.store.toggleNav(e)}>
                     <i className = "fa fa-bars"></i>
                 </a>
                 {this.handleNav}

@@ -7,7 +7,8 @@ class Store {
     //nav and contact
     navTogglerVisible = false;
     isContactVisible = false;
-    toggleNav = () => this.navTogglerVisible = !this.navTogglerVisible;
+    dropDownSize = 0;
+    toggleNav = (e) => {e.preventDefault(); this.navTogglerVisible = !this.navTogglerVisible};
     closeToggler = () => this.navTogglerVisible = false;
     showContact = (newStatus) => this.isContactVisible = newStatus;
     //filtered publications
@@ -24,7 +25,7 @@ decorate(Store, {
     showContact: action,
     //filtered publications
     filteredPublications: observable,
-    applyFilters: action
+    applyFilters: action,
 });
 
 export default new Store();
