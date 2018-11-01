@@ -16,7 +16,7 @@ const ResearchersBuilder = (ResearchersList) => {
                         <i className="-footer-icon fas fa-envelope"></i>
                         {researcher.email}
                     </p>
-                    <a className = '-researcher-google-scholar' href = {researcher.googleScholar} target = '_blank'>
+                    <a className = '-researcher-google-scholar' href = "" onClick = {(e) => goToGoogleScholar(e, researcher.googleScholar)}>
                         <i className = "-footer-icon ai ai-google-scholar-square "></i>
                         Google Scholar            
                     </a>
@@ -24,6 +24,11 @@ const ResearchersBuilder = (ResearchersList) => {
             </div>
         </div>
     );}));
+}
+
+const goToGoogleScholar = (e, gs) => {
+    e.preventDefault();
+    gs? window.open(gs, '_blank'): null
 }
 
 const Researchers = () => {
