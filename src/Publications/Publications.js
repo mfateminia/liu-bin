@@ -1,74 +1,75 @@
 import React from 'react';
 import { inject, observer } from 'mobx-react';
+import ScrollToTop from '../ScrollToTop/ScrollToTop'
 import './Publications.css';
 import PublicationsAPI from '../API/Publications.json';
 
-class FilteredPublications extends React.Component {
-
-    buildSearchBox(PublicationsAPI){
+const Publications = props => {
+    ScrollToTop();
+    const buildSearchBox = PublicationsAPI => {
         return (
             <div className = '-publications-search-box-wrapper'>
                 <form id = '-publications-search-form-id' className = '-publications-search-box'>
-                    <input id = '-publications-search-input-id' className = '-publications-search-input' type="text" placeholder = 'Search in publications' onChange = {this.applyFilter}></input>
-                    <select id = '-publications-search-year-id' className = '-publications-search-dropdown' onChange = {this.applyFilter}>
-                        {this.buildDropdown('year')}
+                    <input id = '-publications-search-input-id' className = '-publications-search-input' type="text" placeholder = 'Search in publications' onChange = {applyFilter}></input>
+                    <select id = '-publications-search-year-id' className = '-publications-search-dropdown' onChange = {applyFilter}>
+                        {buildDropdown('year')}
                     </select>
-                    <select id = '-publications-search-type-id' className = '-publications-search-dropdown' onChange = {this.applyFilter}>
-                        {this.buildDropdown('type')}
+                    <select id = '-publications-search-type-id' className = '-publications-search-dropdown' onChange = {applyFilter}>
+                        {buildDropdown('type')}
                     </select>
-                    <button className = '-publications-search-button' onClick = {this.clearFilters}>Clear</button>
+                    <button className = '-publications-search-button' onClick = {clearFilters}>Clear</button>
                 </form>
             </div>
         );
     }
-
-    buildDropdown(FilterField){
+    
+    const buildDropdown = FilterField => {
         let arr = PublicationsAPI.map(item => item[FilterField]);
-        arr = this.uniqueAndSort(arr);
+        arr = uniqueAndSort(arr);
         FilterField === 'year' ? arr.unshift('All years') : FilterField;
         FilterField === 'type' ? arr.unshift('All Types') : FilterField;
         return arr.map((item, index) => <option key = {index}>{item}</option>);        
     }
-
-    uniqueAndSort(arr){
+    
+    const uniqueAndSort = arr => {
         if (arr.length === 0) return null;        
-        arr = this.sortArray(arr);
-        arr = this.removeDuplicates(arr);
+        arr = sortArray(arr);
+        arr = removeDuplicates(arr);
         return arr;
     }
-
-    sortArray(arr){
+    
+    const sortArray = arr => {
         arr = (isNaN(arr[0])? arr.sort() : arr.sort((a, b) => b - a));
         return arr;
     }
-
-    removeDuplicates(arr){
+    
+    const removeDuplicates = arr => {
         let uniqueSorted = [];
         for (let CurrentItem of arr) {
             PreviousItem !== CurrentItem ? uniqueSorted.push(CurrentItem) : null
             let PreviousItem = CurrentItem; 
-          }
+            }
         return uniqueSorted;
     }
-
-    applyFilter = () => {
-        const textFilterValue = document.getElementById('-publications-search-input-id').value;
-        const yearFilterValue = document.getElementById('-publications-search-year-id').value;
-        const typeFilterValue = document.getElementById('-publications-search-type-id').value;
-
-        var filteredResults = [...PublicationsAPI];
-        filteredResults = (textFilterValue ? filteredResults.filter(item => (item.title.toLowerCase().includes(textFilterValue.toLowerCase()))) : filteredResults)
-        filteredResults = (yearFilterValue !== 'All years' ? filteredResults.filter(item => (item.year === yearFilterValue)) : filteredResults);
-        filteredResults = (typeFilterValue !== 'All Types' ? filteredResults.filter(item => (item.type === typeFilterValue)) : filteredResults);
-
-        this.props.store.applyFilters(filteredResults);
-    }
-
-    clearFilters = () => {
+    
+    const applyFilter = () => {
+            const textFilterValue = document.getElementById('-publications-search-input-id').value;
+            const yearFilterValue = document.getElementById('-publications-search-year-id').value;
+            const typeFilterValue = document.getElementById('-publications-search-type-id').value;
+    
+            var filteredResults = [...PublicationsAPI];
+            filteredResults = (textFilterValue ? filteredResults.filter(item => (item.title.toLowerCase().includes(textFilterValue.toLowerCase()))) : filteredResults)
+            filteredResults = (yearFilterValue !== 'All years' ? filteredResults.filter(item => (item.year === yearFilterValue)) : filteredResults);
+            filteredResults = (typeFilterValue !== 'All Types' ? filteredResults.filter(item => (item.type === typeFilterValue)) : filteredResults);
+    
+            props.store.applyFilters(filteredResults);
+        }
+    
+    const clearFilters = () => {
         document.getElementById("-publications-search-form-id").reset();
     }
 
-    buildPublications = (filteredPublications) => {
+    const buildPublications = filteredPublications => {
         return filteredPublications.map((item, index) => {
             var link = 'https://dx.doi.org/' + item.doi;
             return (
@@ -77,7 +78,7 @@ class FilteredPublications extends React.Component {
                         {item.title}
                     </p> 
                     <p className = '-publications-authors'>
-                        {this.buildAuthors(item.authors)}
+                        {buildAuthors(item.authors)}
                     </p>
                     <p className = '-publications-address'>
                         <span className = '-publications-journal'>{item.containerTitle}</span>, 
@@ -90,7 +91,7 @@ class FilteredPublications extends React.Component {
         });
     }
 
-    buildAuthors = (authors) => {
+    const buildAuthors = authors => {
         return ( authors.map((author, index) => {
                 if(author.firstName || author.lastName){
                     return author.firstName+' '+author.lastName +', ';
@@ -98,16 +99,14 @@ class FilteredPublications extends React.Component {
                 return null;
             })
         );
-    }
-
-    render(){
-        return (
-            <div className = '-publications-wrapper  container'>
-                {this.buildSearchBox(PublicationsAPI)}
-                {this.buildPublications(this.props.store.filteredPublications)}
-            </div>
-        );
     } 
+        
+    return (
+        <div className = '-publications-wrapper  container'>
+            {buildSearchBox(PublicationsAPI)}
+            {buildPublications(props.store.filteredPublications)}
+        </div>
+    );
 }
 
-export default inject('store')(observer(FilteredPublications));
+export default inject('store')(observer(Publications));
