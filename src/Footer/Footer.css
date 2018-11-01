@@ -21,11 +21,11 @@
   margin-right: 10px; }
 
 .-footer-nav {
-  border-left: 1px solid #ffc000;
-  color: #ffc000; }
-  .-footer-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0; }
-  .-footer-nav li {
-    padding-bottom: 10px; }
+  border-left: 1px solid #ffc000; }
+  .-footer-nav .-footer-nav-link {
+    color: #ffc000;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 20px; }
+  .-footer-nav .-footer-nav-link:last-child {
+    margin-bottom: 0px; }

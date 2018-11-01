@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -8,7 +9,7 @@ const Footer = () => {
             <div className = '-footer-inner-wrapper container'>
                 
                 <div className = 'row'>
-                    <div className = 'col-11 row'>
+                    <div className = 'col-10 row'>
                         <div className = '-footer-address col-md-7 order-2 order-md-1'>                        
                             National University of Singapore,
                             Department of Chemical and Biomolecular Engineering, 
@@ -34,13 +35,11 @@ const Footer = () => {
                             </div>						
                         </div>						
                     </div>
-                    <div className = '-footer-nav col-1 d-none d-md-block'>
-                        <ul>
-                            <li><a>Home</a></li>
-                            <li><a>Research</a></li>
-                            <li><a>Publications</a></li>
-                            <li><a>People</a></li>
-                        </ul>
+                    <div className = '-footer-nav col-2 d-none d-md-block'>
+                        <Link to = {'/'} className = '-footer-nav-link'>Home</Link>
+                        <Link to = '/publications' className = '-footer-nav-link'>Publications</Link>
+                        <Link to = '/people' className = '-footer-nav-link'>People</Link>
+                        <a href="" className = '-footer-nav-link'>Tools</a>
                     </div>					
                 </div>
             </div>
