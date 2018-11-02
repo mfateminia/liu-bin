@@ -26,8 +26,8 @@ const Publications = props => {
     const buildDropdown = FilterField => {
         let arr = PublicationsAPI.map(item => item[FilterField]);
         arr = uniqueAndSort(arr);
-        FilterField === 'year' ? arr.unshift('All years') : FilterField;
-        FilterField === 'type' ? arr.unshift('All Types') : FilterField;
+        FilterField === 'year' ? arr.unshift('All years') : null;
+        FilterField === 'type' ? arr.unshift('All Types') : null;
         return arr.map((item, index) => <option key = {index}>{item}</option>);        
     }
     
@@ -70,21 +70,24 @@ const Publications = props => {
     }
 
     const buildPublications = filteredPublications => {
-        return filteredPublications.map((item, index) => {
-            var link = 'https://dx.doi.org/' + item.doi;
+        
+        return filteredPublications.map((item, index) => {            
+            let {id, year, type, containerTitle, authors, volume, page, doi, issn, title} = item;
+            let link = 'https://dx.doi.org/' + doi;
+
             return (
-                <a className = '-publications-item' href = {link} target = '_blank' key = {item.doi}>                                
+                <a className = '-publications-item' href = {link} target = '_blank' key = {id}>                                
                     <p className = '-publications-title'>
-                        {item.title}
+                        {title}
                     </p> 
                     <p className = '-publications-authors'>
-                        {buildAuthors(item.authors)}
+                        {buildAuthors(authors)}
                     </p>
                     <p className = '-publications-address'>
-                        <span className = '-publications-journal'>{item.containerTitle}</span>, 
-                        <span className = '-publications-year'> {item.year}</span>, 
-                        <span className = '-publications-volume'>{item.volume || 'hahaha'}</span>, 
-                        <span className = '-publications-page'> {item.page}</span>
+                        <span className = '-publications-journal'>{containerTitle}</span>, 
+                        <span className = '-publications-year'> {year}</span>, 
+                        <span className = '-publications-volume'>{volume}</span>, 
+                        <span className = '-publications-page'> {page}</span>
                     </p>                                                                 
                 </a> 
             );
@@ -92,9 +95,10 @@ const Publications = props => {
     }
 
     const buildAuthors = authors => {
-        return ( authors.map((author, index) => {
+        return (authors.map((author, index) => {
                 if(author.firstName || author.lastName){
-                    return author.firstName+' '+author.lastName +', ';
+                    let delimiter = (index < (authors.length-1) ? ', ' : '');
+                    return author.firstName + ' ' + author.lastName + delimiter;
                 }
                 return null;
             })
