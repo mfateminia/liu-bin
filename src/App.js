@@ -15,11 +15,12 @@ class App extends Component {
       <div className="-app-wrapper container-fluid text-primary">
         <Nav />
         <Route path='/' exact component={HeroImage} />
-        <Route path='/' exact render = {()=> <h1 className = '-app-titles container'>Research</h1>} />
-        <Route path='/' exact component={Research} />
-        <Route path='/' exact component={FeaturedPapers} />
-        <Route path='/publications' exact component={Publications} />
-        <Route path='/people' exact component={People} />
+          <Route path='/' exact render={()=>(<h1 id='research' className = '-app-title d-none d-md-block'>Research</h1>)} />
+          <Route path='/' exact component={Research} />
+          <Route path='/' exact render={()=>(<h1 className = '-app-title d-none d-md-block'>Featured Papers</h1>)} />
+          <Route path='/' exact component={FeaturedPapers} />
+          <Route path='/publications' exact component={Publications} />
+          <Route path='/people' exact component={People} />
         <Footer />        
       </div>
     );

@@ -3,7 +3,6 @@
 .-hero-image-outer-wrapper{
     overflow:visible;
     color: $white-color;
-    //height:500px;
 
     .-hero-image-inner-wrapper{
         position: relative;
@@ -36,7 +35,7 @@
         z-index: 2;
         position: absolute;
         display: inline;
-        top: 50%;
+        top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;    
@@ -48,23 +47,40 @@
 }
 
 .-hero-image-button{
-    transition: 200ms;
-    margin: 0 auto;
-    margin-top: 20px;
-    padding: 12px;
-    background-color: $secondary-color;
-    color: $primary-color;
-    height: 48px;
-    width: 200px;
-    border-radius: 4px;
-    cursor: pointer;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    z-index: 1;
+    transform: translateX(-50%);
+
+    .-hero-image-icon{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+    }
+}
+
+.-hero-image-button:visited{
+    border-color: $white-color;
+    color: $white-color;
 }
 
 .-hero-image-button:hover{
     transition: 200ms;
-    background-color: $primary-color;
-    color: $secondary-color;
+    border-color: $success-color;
+    color: $success-color;
 }
+
+
+
+
 
 @media only screen and (max-width: 485px) {
     .-hero-image-outer-wrapper{
@@ -123,30 +139,3 @@
         max-width: 500px;
     }   
 }
-
-
-
-//     h1{
-//         font-size: 18px;
-//         font-weight: bold;
-//     }
-//     p{
-//         font-size: 14px;
-//     }
-
-
-// }
-// @media only screen and (min-width: 425px) and (max-width:768px) {
-//     h1{
-//         font-size: 25px;
-//         font-weight: bold;
-//     }
-//     p{
-//         font-size: 16px;
-//         max-width: 500px;
-//     }
-
-//     .-hero-image-button{
-//         display: none;
-//     }
-// }

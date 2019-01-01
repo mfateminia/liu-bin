@@ -1,7 +1,15 @@
 .-research-outer-wrapper {
-  border: 1px solid #deebf7;
   padding: 0;
-  margin-top: 20px; }
+  margin-top: 20px;
+  text-align: center; }
+  .-research-outer-wrapper .-app-titles {
+    color: #ffc000;
+    margin: 40px 0; }
+  .-research-outer-wrapper .card {
+    margin-bottom: 20px;
+    box-shadow: 0 5px 10px -6px black; }
+  .-research-outer-wrapper .card-title {
+    min-height: 100px; }
   .-research-outer-wrapper .-research-header {
     font-size: 18px;
     margin: auto;
@@ -14,6 +22,13 @@
     background-color: #004080; }
   .-research-outer-wrapper .-research-body {
     padding: 20px; }
+    .-research-outer-wrapper .-research-body .-research-body-content {
+      text-align: justify; }
+  .-research-outer-wrapper .-research-body-img {
+    text-align: center;
+    padding-bottom: 20px; }
+    .-research-outer-wrapper .-research-body-img img {
+      width: 450px; }
   .-research-outer-wrapper .-research-refs {
     font-size: 14px;
     padding-left: 10px;

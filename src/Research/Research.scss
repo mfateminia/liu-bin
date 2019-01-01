@@ -1,9 +1,23 @@
 @import '../styles/global.scss';
 
 .-research-outer-wrapper{
-    border: 1px solid $secondary-color;
     padding: 0;
     margin-top: 20px;
+    text-align: center;
+
+    .-app-titles{
+        color: $success-color;
+        margin: 40px 0;
+    }
+
+    .card{
+        margin-bottom: 20px;
+        @include addShadow;
+    }
+
+    .card-title{
+        min-height: 100px;
+    }
     
     .-research-header{
         font-size: 18px;
@@ -19,6 +33,19 @@
 
     .-research-body{
         padding: 20px;
+
+        .-research-body-content{
+           text-align: justify;
+        }
+    }
+
+    .-research-body-img{
+        text-align: center;
+        padding-bottom: 20px;
+
+        img{
+            width: 450px;
+        }
     }
 
     .-research-refs{

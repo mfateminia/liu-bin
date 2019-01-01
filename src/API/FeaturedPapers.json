@@ -1,9 +1,20 @@
 [
     {
         "imgUrl": "",
-        "title": "",
-        "subtitle": "",
-        "text": ""
-
+        "title": "Aggregation-Induced Emission (AIE) Dots: Emerging Theranostic Nanolights",
+        "subtitle": "Guangxue Feng and Bin Liu",
+        "text": "Nanolights. Acc. Chem. Res. 51, 1404"
+    },
+    {
+        "imgUrl": "",
+        "title": "Photosensitizers with Aggregation-Induced Emission: Materials and Biomedical Applications",
+        "subtitle": "Fang Hu, Shidang Xu and Bin Liu",
+        "text": "Adv. Mater., 30, 1801350"
+    },
+    {
+        "imgUrl": "",
+        "title": "Polymerization-Enhanced Photosensitization",
+        "subtitle": "Wenbo Wu, Duo Mao, Shidang Xu, Kenry, Fang Hu, Xueqi Li, Deling Kong, Bin Liu ",
+        "text": "Adv. Mater., 30, 1801350"
     }
 ]

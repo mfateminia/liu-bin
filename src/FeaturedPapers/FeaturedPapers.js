@@ -2,15 +2,11 @@ import React from 'react';
 import FeaturedPapersAPI from '../API/FeaturedPapers';
 import './FeaturedPapers.css';
 
-const build = () => {
+const buildFeaturedPapers = () => {
     return FeaturedPapersAPI.map(paper => {
         return (
-            <div className = 'row'>
-                <div className = 'col-md-4'>
-                    <img className = 'img-fluid' src = {paper.imgUrl} alt = 'not found!'/>
-                </div>
-                
-                <div className = '-card-body col-md-8'>
+            <div className = 'row'>                
+                <div className = '-card-body'>
                     <div className = '-card-title-wrapper'>
                         <p className = '-card-title font-weight-bold'>
                             {paper.title}
@@ -36,7 +32,7 @@ const build = () => {
 const HorizCard = () => {
     return (
         <div className = '-card-wrapper container clearfix p-4 bg-secondary'>
-
+            {buildFeaturedPapers()}
         </div>
     );
 }

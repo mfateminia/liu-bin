@@ -6,28 +6,14 @@ const researchBuilder = () => {
     return (
         ResearchAreas.map((item,index)=>{
             return (
-                <div className = '-research-outer-wrapper container' key = {index}>
-                    <p className = '-research-header'>
-                        {item.header}
-                    </p>
-                    <div className = '-research-body row'>
-                        <div className = 'col-lg-5 text-center'>
-                            <img className = 'img-fluid' src={process.env.PUBLIC_URL + '/img/research/' + item.image} alt='not found!' />
+                    <div className="col-12 col-sm-6 col-xl-3">
+                        <div className="card">
+                            <img className="card-img-top" src={process.env.PUBLIC_URL + '/img/research/' + item.image} alt="Not found!"></img>
+                            <div className="card-body">
+                                <h5 className="card-title">{item.header}</h5>
+                            </div>
                         </div>
-                        <div className = '-research-body-content col-lg-7'>
-                          {item.content}
-                        </div> 
-                        <div className = '-research-refs'>
-                            <p className = '-research-refs-header'>
-                                Explore some of our papers in this area
-                            </p>
-
-                            <div>
-                                {refBuilder(item.ref)}
-                            </div>               
-                        </div>                           
                     </div>
-                </div>
             );
         })
     );
@@ -55,7 +41,11 @@ const refBuilder = (refs) => {
 }
 
 const Research = () =>{
-    return researchBuilder();
+    return (
+        <div className='-research-outer-wrapper row'>
+            {researchBuilder()}
+        </div>
+    );
 }
 
 export default Research;

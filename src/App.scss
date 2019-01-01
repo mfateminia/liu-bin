@@ -10,8 +10,10 @@ body, html{
     min-height: 100%;
     padding-bottom: 250px;
 
-    .-app-titles{
+    .-app-title{
         color: $success-color;
-        margin-top: 40px;
+        text-align: center;
+        padding-top: 90px;
+        margin-bottom: 50px;
     }
 }
