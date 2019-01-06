@@ -1,21 +1,5 @@
 [
     {
-      "firstName": "S.M. Ali",
-      "lastName": "FATEMINIA",
-      "rank": "PhD Student",
-      "email": "fateminia@u.nus.edu",
-      "imageName": "FATEMINIA_SMAli.jpg",
-      "googleScholar": "https://scholar.google.com/citations?user=snEa4tsAAAAJ"
-    },
-    {
-      "firstName": "Purnima",
-      "lastName": "MANGHNANI",
-      "rank": "PhD Student",
-      "email": "a0123582@u.nus.edu",
-      "imageName": "MANGHNANI_Purnima.jpg",
-      "googleScholar": "https://scholar.google.com.sg/citations?user=_1ZfsVgAAAAJ"
-    },
-    {
       "firstName": "Xueqi",
       "lastName": "LI",
       "rank": "PhD Student",
@@ -69,6 +53,14 @@
       "rank": "PhD Student",
       "email": "e0146311@u.nus.edu",
       "imageName": "WANG_Yuanbo.jpg",
+      "googleScholar": ""
+    },
+    {
+      "firstName": "Tianjiao",
+      "lastName": "DAI",
+      "rank": "PhD Student",
+      "email": "e0360523@u.nus.edu",
+      "imageName": "DAI_Tianjiao.jpg",
       "googleScholar": ""
     },
     {
@@ -142,6 +134,14 @@
       "email": "cheken@nus.edu.sg",
       "imageName": "KENRY.jpg",
       "googleScholar": ""
+    },
+    {
+      "firstName": "Jingjing",
+      "lastName": "LIU",
+      "rank": "Research Fellow",
+      "email": "cheljin@nus.edu.sg",
+      "imageName": "LIU_Jingjing.jpg",
+      "googleScholar": "https://scholar.google.com/citations?hl=en&user=sA6Vsd8AAAAJ&view_op=list_works&sortby=pubdate"
     },
     {
       "firstName": "Xingang",

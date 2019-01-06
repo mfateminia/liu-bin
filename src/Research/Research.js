@@ -12,7 +12,26 @@ const researchBuilder = () => {
                             <div className="card-body">
                                 <h5 className="card-title">{item.header}</h5>
                             </div>
+                            <button type="button" className="btn btn-lg -research-read-btn" data-toggle="modal" data-target={"#research-modal-"+index}>Read More</button>
+
                         </div>
+                        <div className="modal fade" id={"research-modal-"+index} role="dialog">
+                            <div className="modal-dialog">
+    
+                                <div className="modal-content">
+                                    <div className="modal-header">
+                                        <button type="button" className="close" data-dismiss="modal">&times;</button>
+                                        <h4 className="modal-title">{item.header}</h4>
+                                    </div>
+                                    <div className="modal-body">
+                                        <p>{item.content}</p>
+                                    </div>
+                                    <div className="modal-footer">
+                                        <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>      
+                            </div>
+                        </div>   
                     </div>
             );
         })
@@ -34,7 +53,7 @@ const refBuilder = (refs) => {
                     <span className = '-research-refs-year'>{ref.year}</span>, 
                     <span className = '-research-refs-volume'>{ref.volume}</span>, 
                     <span className = '-research-refs-page'>{ref.page}</span>
-                </p>                                                                 
+                </p>                                                              
             </div> 
         )
     });

@@ -1,11 +1,15 @@
 .-footer-outer-wrapper {
   font-size: 14px;
-  min-height: 200px;
-  padding-top: 30px;
+  padding-top: 20px;
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0; }
+
+.-footer-mobile {
+  text-align: center;
+  padding-bottom: 20px;
+  color: #deebf7; }
 
 .-footer-address {
   padding-right: 50px;

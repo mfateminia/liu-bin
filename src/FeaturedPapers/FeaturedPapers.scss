@@ -1,12 +1,27 @@
+@import '../styles/global.scss';
+
 .-card-wrapper{
     margin-top: 12px;
     min-height: 250px;
-    // img{
-    //     position: absolute;
-    //     top:50%;
-    //     left:0;
-    //     transform: translateY(-50%);
-    // }
+
+    a{
+        text-decoration: none;
+    }
+
+    a:hover{
+        text-decoration: none;
+        color: $primary-color;
+        .-card-inner-wrapper{
+            background-color: darken($secondary-color, 4);
+        }
+    }
+}
+
+.-card-inner-wrapper{
+    padding: 40px;
+    margin-bottom: 10px;
+    background-color: $secondary-color;
+    @include addShadow;
 }
 
 p{

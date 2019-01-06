@@ -19,7 +19,7 @@
       left: 0;
       bottom: 0;
       right: 0;
-      background-color: rgba(0, 0, 0, 0.7); }
+      background-color: rgba(0, 0, 0, 0.8); }
   .-hero-image-outer-wrapper .-hero-image-text-wrapper {
     z-index: 2;
     position: absolute;
@@ -48,6 +48,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 20px; }
+
+.hero-image-button {
+  color: #ffffff; }
 
 .-hero-image-button:visited {
   border-color: #ffffff;

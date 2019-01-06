@@ -2,6 +2,8 @@
   padding: 0;
   margin-top: 20px;
   text-align: center; }
+  .-research-outer-wrapper .modal-body {
+    text-align: justify; }
   .-research-outer-wrapper .-app-titles {
     color: #ffc000;
     margin: 40px 0; }
@@ -29,6 +31,12 @@
     padding-bottom: 20px; }
     .-research-outer-wrapper .-research-body-img img {
       width: 450px; }
+  .-research-outer-wrapper .-research-read-btn {
+    background-color: #ffc000;
+    color: #ffffff; }
+  .-research-outer-wrapper .-research-read-btn:hover {
+    background-color: #ebb100;
+    color: #ffffff; }
   .-research-outer-wrapper .-research-refs {
     font-size: 14px;
     padding-left: 10px;

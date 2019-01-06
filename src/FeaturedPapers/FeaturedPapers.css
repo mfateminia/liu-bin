@@ -1,12 +1,25 @@
 .-card-wrapper {
-  margin-top: 20px;
+  margin-top: 12px;
   min-height: 250px; }
+  .-card-wrapper a {
+    text-decoration: none; }
+  .-card-wrapper a:hover {
+    text-decoration: none;
+    color: #004080; }
+    .-card-wrapper a:hover .-card-inner-wrapper {
+      background-color: #cee1f3; }
+
+.-card-inner-wrapper {
+  padding: 40px;
+  margin-bottom: 10px;
+  background-color: #deebf7;
+  box-shadow: 0 5px 10px -6px black; }
 
 p {
   padding: 0;
   margin: 0; }
 
-.-card-subtitle {
+.-subtitle {
   margin-top: 8px;
   font-size: 14px; }
 
@@ -14,5 +27,5 @@ p {
   margin-top: 6px;
   font-size: 14px; }
 
-.-card-button {
+.-button {
   margin-top: 12px; }

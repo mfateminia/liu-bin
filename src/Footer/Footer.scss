@@ -1,15 +1,18 @@
 @import '../styles/global.scss';
 
 .-footer-outer-wrapper{
-    font-size: 14px;
-    
-    min-height: 200px;   
-    padding-top: 30px;
-    
+    font-size: 14px;    
+    padding-top: 20px;    
     position: absolute;
     bottom:0;
     right:0;
     left:0;
+}
+
+.-footer-mobile{
+    text-align: center;
+    padding-bottom: 20px;
+    color: $secondary-color;
 }
 
 .-footer-address{

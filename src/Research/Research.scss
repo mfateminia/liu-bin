@@ -5,6 +5,10 @@
     margin-top: 20px;
     text-align: center;
 
+    .modal-body{
+        text-align: justify;
+    }
+
     .-app-titles{
         color: $success-color;
         margin: 40px 0;
@@ -48,6 +52,16 @@
         }
     }
 
+    .-research-read-btn{
+        background-color: $success-color;
+        color: $white-color;
+    }
+
+    .-research-read-btn:hover{
+        background-color: darken($success-color, 4);
+        color: $white-color;
+    }    
+
     .-research-refs{
         font-size: 14px;
         padding-left: 10px;
@@ -61,9 +75,7 @@
 
         .-research-refs-item{
             padding-top: 10px;
-            .-research-refs-title{
 
-            }
 
             .-research-refs-authors{
                 margin-top:5px;

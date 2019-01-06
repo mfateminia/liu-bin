@@ -5,33 +5,31 @@ import './FeaturedPapers.css';
 const buildFeaturedPapers = () => {
     return FeaturedPapersAPI.map(paper => {
         return (
-            <div className = 'row'>                
-                <div className = '-card-body'>
-                    <div className = '-card-title-wrapper'>
-                        <p className = '-card-title font-weight-bold'>
-                            {paper.title}
-                        </p>
-                        <p className = '-card-subtitle font-italic'>
-                            {paper.subtitle}
-                        </p>
-                    </div>
+            <a href={paper.url} target='_blank'>
+                <div className = '-card-inner-wrapper'>                
+                    <div className = '-card-body'>
+                        <div className = '-card-title-wrapper'>
+                            <p className = '-card-title font-weight-bold'>
+                                {paper.title}
+                            </p>
+                            <p className = '-card-subtitle font-italic'>
+                                {paper.subtitle}
+                            </p>
+                        </div>
 
-                    <p className = '-card-text'>
-                        {paper.text}
-                    </p>
-
-                    <div className = '-card-button btn btn-primary'>
-                        Read More
+                        <p className = '-card-text'>
+                            {paper.text}
+                        </p>
                     </div>
                 </div>
-            </div>
+            </a>
         )
     })
 }
 
 const HorizCard = () => {
     return (
-        <div className = '-card-wrapper container clearfix p-4 bg-secondary'>
+        <div className = '-card-wrapper container clearfix'>
             {buildFeaturedPapers()}
         </div>
     );

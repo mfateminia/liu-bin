@@ -12,7 +12,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 const Root = <Provider store = {Store}>
-                <BrowserRouter basename={'/stf/cheliub/test'}>
+                <BrowserRouter basename={'/stf/cheliub/'}>
                     <App />
                 </BrowserRouter>
             </Provider>
