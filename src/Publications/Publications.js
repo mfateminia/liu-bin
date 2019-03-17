@@ -3,6 +3,7 @@ import { inject, observer } from 'mobx-react';
 import ScrollToTop from '../ScrollToTop/ScrollToTop'
 import './Publications.css';
 import PublicationsAPI from '../API/Publications.json';
+import {sortArrayOfObjects} from '../utils';
 
 const Publications = props => {
     ScrollToTop();
@@ -69,9 +70,9 @@ const Publications = props => {
         document.getElementById("-publications-search-form-id").reset();
     }
 
-    const buildPublications = filteredPublications => {
+    const buildPublications = filteredPublications => { 
         
-        return filteredPublications.map((item, index) => {            
+        return sortArrayOfObjects(filteredPublications, 'year', 'desending').map(item => {            
             let {id, year, type, containerTitle, authors, volume, page, doi, issn, title} = item;
             let link = 'https://dx.doi.org/' + doi;
 
